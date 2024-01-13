@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Middleware\ConfigureLang;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Folio\Folio;
 
@@ -22,7 +23,7 @@ class WebServiceProvider extends ServiceProvider
     {
         Folio::path(resource_path('web/views/pages'))->middleware([
             '*' => [
-
+                ConfigureLang::class
             ],
         ]);
 
