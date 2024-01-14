@@ -1,3 +1,5 @@
 <x-web::layout>
-    slot content 
+    <x-web::button class="btn-primary">
+        Hola
+    </x-web::button>
 </x-web::layout>
