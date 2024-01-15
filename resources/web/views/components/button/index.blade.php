@@ -1,6 +1,8 @@
 @props([
-    'color'
-])
-<button {{ $attributes->merge(['class' => 'btn', 'type' => 'button'])}}>
+    'asLink' => false,
+    'outline' => false
+]) 
+
+<{{ $asLink ? 'a' : 'button'}} {{ $attributes->merge(['class' => 'btn', 'type' => ! $asLink ? 'button' : ''])->class(['btn-outline' => $outline]) }}>
     {{ $slot }}   
-</button>
+</{{ $asLink ? 'a' : 'button'}}>

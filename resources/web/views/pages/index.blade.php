@@ -1,5 +1,12 @@
+<?php
+
+use function Laravel\Folio\name;
+
+name('index');
+
+?>
+
 <x-web::layout>
-    <x-web::button class="btn-primary">
-        Hola
-    </x-web::button>
+   <x-web::pages.index.sections.landing />
+   <x-web::pages.index.sections.about-me />
 </x-web::layout>

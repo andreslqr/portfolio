@@ -1,9 +1,5 @@
-@props([
-    'normalHeight' => false,
-])
-
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" x-data :data-theme="$store.theme.getName()">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" x-data data-theme="dim" :data-theme="$store.theme.getName()">
 
 <head>
     <meta charset="UTF-8">
@@ -13,13 +9,14 @@
     @vite('resources/web/sass/app.scss')
 </head>
 
-<body {{ $attributes }}>
+<body>
     <x-web::drawer>
-        <x-slot:side>
+        <x-slot:side class="z-20">
+            <x-web::layout.header.items />
         </x-slot:side>
-        <x-slot:content>
+        <x-slot:content class="scroll-smooth">
             <x-web::layout.header />
-            <main>
+            <main {{ $attributes }}>
                 {{ $slot }}
             </main>
             <x-web::layout.footer />

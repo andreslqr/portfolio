@@ -8,21 +8,21 @@ export default function (Alpine) {
             light: 'bumblebee',
             dark: 'dim'
         },
-        name: null,
+        name: 'dim',
         init() {
-            this.name = window.matchMedia('(prefers-color-scheme: dark)').matches ? this.themes.dark : this.themes.light
+            this.name = sessionStorage.getItem('theme') ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? this.themes.dark : this.themes.light)
         },
         getName() {
             return this.name
         },
         setName(name) {
-            this.name = name
+            sessionStorage.setItem('theme', this.name = name)
         },
         enableDarkMode() {
-            this.name = this.themes.dark
+            this.setName(this.themes.dark)
         },
         disableDarkMode() {
-            this.name = this.themes.light
+            this.setName(this.themes.light)
         },
         darkMode() {
             return this.name === this.themes.dark

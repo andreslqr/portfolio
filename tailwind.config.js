@@ -16,6 +16,10 @@ export default {
             height: {
                 '8-screen': '8vh',
                 '92-screen': '92vh'
+            },
+            minHeight: {
+                '8-screen': '8vh',
+                '92-screen': '92vh'
             } 
         },
     },

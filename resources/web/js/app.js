@@ -2,6 +2,10 @@ import { Livewire, Alpine } from '../../../vendor/livewire/livewire/dist/livewir
 import Theme from './plugins/theme'
 import Drawer from './plugins/daisyui/drawer'
 import Swap from './plugins/daisyui/swap'
+
+import.meta.glob([
+    '../images/**',
+]);
  
 Alpine.plugin(Theme)
 Alpine.plugin(Drawer)
