@@ -2,7 +2,14 @@
 
 return [
     'available-langs' => [
-        'es',
-        'en'
+        'es' => [
+            'name' => 'Español',
+            'icon' => 'flag-country-mx'
+        ],
+        'en' => [
+
+            'name' => 'English',
+            'icon' => 'flag-country-us'
+        ]
     ]
 ];

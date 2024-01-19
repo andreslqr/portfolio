@@ -55,7 +55,7 @@ class ConfigureLang
             });
 
 
-        return $locales->firstWhere(fn($lang) => in_array($lang['locale'], config('langs.available-langs')))['locale'] 
-            ?? Arr::first(config('langs.available-langs'));
+        return $locales->firstWhere(fn($lang) => in_array($lang['locale'], array_keys(config('langs.available-langs'))))['locale'] 
+            ?? Arr::first(array_keys(config('langs.available-langs')));
     }
 }
