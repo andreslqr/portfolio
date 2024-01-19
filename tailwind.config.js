@@ -11,7 +11,7 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: colors.indigo
+                
             },
             height: {
                 '8-screen': '8vh',

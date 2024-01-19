@@ -1,5 +1,5 @@
 <section {{ $attributes->merge(['class' => 'hero min-h-92-screen bg-image-1'])}}>
-    <div class="hero-overlay bg-primary bg-opacity-70"></div>
+    <div class="hero-overlay bg-primary-content bg-opacity-70"></div>
     <div class="hero-content flex-col lg:flex-row text-neutral-content">
         <div class="avatar">
             <div class="w-48 rounded-full">
@@ -9,7 +9,7 @@
 
         </div>
         <div>
-            <h1 class="text-5xl font-bold">
+            <h1 class="text-5xl font-bold text-primary">
                 {{ __("Hello I'm Andres Lopez!") }}
             </h1>
             <p class="py-6 flex gap-3">
