@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Blog;
 
 use App\Filament\Resources\Blog\PostResource\Pages;
 use App\Models\Blog\Post;
+use App\Models\Scopes\IsPublishedScope;
 use Filament\Forms\Components\Builder;
 use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Checkbox;
@@ -23,8 +24,12 @@ use Filament\Forms\Set;
 use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
 
 class PostResource extends Resource
@@ -215,7 +220,12 @@ class PostResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('title')
+                    ->searchable(),
+                TextColumn::make('author')
+                    ->searchable(),
+                IconColumn::make('is_published')
+                    ->boolean(),
             ])
             ->filters([
                 //
@@ -227,6 +237,15 @@ class PostResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
+            ]);
+    }
+
+    public static function getEloquentQuery(): EloquentBuilder
+    {
+        return parent::getEloquentQuery()
+            ->withoutGlobalScopes([
+                SoftDeletingScope::class,
+                IsPublishedScope::class
             ]);
     }
 
