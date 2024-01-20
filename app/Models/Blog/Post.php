@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Storage;
 use Spatie\Translatable\HasTranslations;
+use Illuminate\Support\Str;
 
 /**
  * @method static \Database\Factories\Blog\PostFactory factory()
@@ -95,8 +97,38 @@ class Post extends Model
      * 
      * @return string
      */
-    public function getWebUrl()
+    public function getWebUrl(): ?string
     {
         return route('blog.show', ['slug' => $this->slug]);
+    }
+
+    /**
+     * Get the image
+     * 
+     * @return string
+     */
+    public function getWebImage(): ?string
+    {
+        return asset(Storage::url($this->image));
+    }
+
+    /**
+     * Get the title
+     * 
+     * @return string
+     */
+    public function getWebTitle(): ?string
+    {
+        return Str::of($this->title)->apa()->toString();
+    }
+
+    /**
+     * Get the short description
+     * 
+     * @return string
+     */
+    public function getWebShortDescription(): ?string
+    {
+        return $this->short_description;
     }
 }

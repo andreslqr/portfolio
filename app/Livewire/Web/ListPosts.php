@@ -22,4 +22,9 @@ class ListPosts extends Component
     {
         return view('web::livewire.list-posts');
     }
+
+    public function paginationView()
+    {
+        return 'web::pagination.index';
+    }
 }

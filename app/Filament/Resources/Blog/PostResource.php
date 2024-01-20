@@ -82,7 +82,7 @@ class PostResource extends Resource
                                     ->disk('public')
                                     ->imageEditor()
                                     ->imageResizeMode('cover')
-                                    ->imageCropAspectRatio('4:3'),
+                                    ->imageCropAspectRatio('2:1'),
                                 Textarea::make('short_description')
                                     ->required()
                                     ->columnSpan(4),

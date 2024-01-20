@@ -20,7 +20,10 @@ export default {
             minHeight: {
                 '8-screen': '8vh',
                 '92-screen': '92vh'
-            } 
+            },
+            aspectRatio: {
+                'univision': '2/1'
+            }
         },
     },
     plugins: [

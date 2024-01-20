@@ -29,7 +29,7 @@ class PostFactory extends Factory
                 'en' => fake('en_US')->text(),
                 'es' => fake('es_ES')->text()
             ],
-            'image' => str(fake()->image('storage/app/public/posts', 1024, 768))->afterLast('public/'),
+            'image' => str(fake()->image('storage/app/public/posts', 1024, 512))->afterLast('public/'),
             'author' => fake()->name(),
             'published_at' => fake()->dateTimeBetween('-2 week', '-1 week'),
             'expired_at' => fake()->dateTimeBetween('-1 week', '+1 week'),

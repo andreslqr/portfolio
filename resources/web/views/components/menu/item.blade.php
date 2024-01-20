@@ -1,8 +1,9 @@
 @props([
-    'active' => false
+    'active' => false,
+    'disabled' => false
 ])
 
-<li>
+<li class="{{ $disabled ? 'disabled' : '' }}">
     <a {{ $attributes->class(['active' => $active]) }}>
         {{ $slot }}
     </a>
