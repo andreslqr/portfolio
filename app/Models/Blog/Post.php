@@ -5,11 +5,13 @@ namespace App\Models\Blog;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\Translatable\HasTranslations;
 
 class Post extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    use HasTranslations;
 
     /**
      * The attributes that are mass assignable.
@@ -19,6 +21,7 @@ class Post extends Model
     protected $fillable = [
         'image',
         'title',
+        'slug',
         'short_description',
         'content',
         'author',
@@ -47,5 +50,17 @@ class Post extends Model
     protected $attributes = [
         'is_active' => false,
         'content' => '[]',
+    ];
+
+    /**
+     * The model's translatable attributes
+     * 
+     * @var array
+     */
+    public $translatable = [
+        'title',
+        'slug',
+        'short_description',
+        'content'
     ];
 }
