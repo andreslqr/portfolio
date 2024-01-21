@@ -226,5 +226,10 @@
     "E-Commerce development": "E-Commerce development",
     "Package development": "Package development",
     "Previous": "Previous",
-    "Next": "Next"
+    "Next": "Next",
+    "Published": "Published",
+    "by": "by",
+    "The content can't be rendered beacuse there is no visualizer": "The content can't be rendered beacuse there is no visualizer",
+    "Copied!": "Copied!",
+    "Copy": "Copy"
 }

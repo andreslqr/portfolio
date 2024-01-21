@@ -17,7 +17,7 @@
         <div class="w-3/4 h-6 skeleton">
         </div>
     </div>
-    <p class="mt-3 text-neutral-content text-sm group-hover:underline" wire:loading.class="hidden">
+    <p class="mt-3 text-base-content text-sm group-hover:underline" wire:loading.class="hidden">
         {{ $post->getWebShortDescription() }}
     </p>
     <div class="mt-3 hidden" wire:loading.class.remove="hidden">

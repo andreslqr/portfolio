@@ -221,5 +221,10 @@
     "All right reserved": "Todos los derechos reservados",
     "Andres Lopez": "Andrés López",
     "Previous": "Anterior",
-    "Next": "Siguiente"
+    "Next": "Siguiente",
+    "Published": "Publicado",
+    "by": "por",
+    "The content can't be rendered beacuse there is no visualizer": "El contenido no puede ser renderizado ya que ni existe visualizador",
+    "Copy": "Copiar",
+    "Copied!": "¡Copiado!"
 }

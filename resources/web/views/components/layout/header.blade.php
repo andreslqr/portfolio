@@ -4,10 +4,10 @@
             <x-heroicon-o-bars-3-center-left class="h-6 w-6" />
         </x-web::drawer.open>
 
-        <a href="{{ route('index') }}" class="btn btn-ghost text-xl sm:hidden">
+        <a href="{{ route('index') }}" class="btn btn-ghost text-primary text-xl sm:hidden">
             {{ __('Andres') }}
         </a>
-        <a href="{{ route('index') }}" class="btn btn-ghost text-xl hidden sm:inline-flex">
+        <a href="{{ route('index') }}" class="btn btn-ghost text-primary text-xl hidden sm:inline-flex">
             {{ __('Andres Portfolio') }}
         </a>
     </div>

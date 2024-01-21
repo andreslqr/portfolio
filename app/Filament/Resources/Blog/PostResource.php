@@ -50,7 +50,7 @@ class PostResource extends Resource
                             ->schema([
                                 TextInput::make('title')
                                 ->live(onBlur: true, debounce: '1s')
-                                ->afterStateUpdated(function (Get $get, Set $set, ?string $operation, ?string $old, ?string $state, ?Model $record) {
+                                ->afterStateUpdated(function (Get $get, Set $set, ?string $operation, ?string $old, ?string $state) {
  
                                     if ($operation == 'edit') {
                                         return;
@@ -180,7 +180,8 @@ class PostResource extends Resource
                             'html' => 'html',
                             'js' => 'js',
                             'css' => 'css',
-                            'sql' => 'sql'
+                            'sql' => 'sql',
+                            'bash' => 'bash'
                         ]),
                     MarkdownEditor::make('content')
                         ->toolbarButtons([])

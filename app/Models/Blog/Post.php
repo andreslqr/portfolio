@@ -2,6 +2,7 @@
 
 namespace App\Models\Blog;
 
+use App\Support\WebContentRender;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -130,5 +131,51 @@ class Post extends Model
     public function getWebShortDescription(): ?string
     {
         return $this->short_description;
+    }
+
+    /**
+     * Get the published at read humans
+     * 
+     * @return string
+     */
+    public function getWebPublishedAt(): ?string
+    {
+        return $this->published_at?->diffForHumans();
+    }
+
+    /**
+     * Get the author of the post for web
+     * 
+     * @return string
+     */
+    public function getWebAuthor(): ?string
+    {
+        return Str::of($this->author)->title()->toString();
+    }
+
+    /**
+     * Get the web content
+     * 
+     * @return 
+     */
+    public function getWebContent()
+    {
+        return WebContentRender::make($this)->render();
+    }
+
+    /**
+     * Get the view for the content
+     * 
+     * @return \Illuminate\View
+     */
+    protected function getBlockContent($block)
+    {
+        return view(match($block['type']) {
+            'paragraph' => 'web::visualizers.paragraph',
+            'code' => 'web::visualizers.code',
+            default => 'web::visualizers.default'
+        }, [
+            'data' => $block['data']
+        ]);
     }
 }
