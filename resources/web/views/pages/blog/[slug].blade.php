@@ -7,7 +7,7 @@ use App\Models\Blog\Post;
 
 name('blog.show');
 
-render(fn (View $view, $slug) => $view->with('post', Post::where('slug->' . app()->getLocale(), $slug)->firstOrFail()));
+render(fn (View $view, $slug) => $view->with('post', Post::where('slug->' . app()->getLocale(), $slug)->with('tags')->firstOrFail()));
 
 ?>
 
@@ -32,6 +32,26 @@ render(fn (View $view, $slug) => $view->with('post', Post::where('slug->' . app(
             <div id="content" class="mt-10">
                 {{ $post->getWebContent() }}
             </div>
+            <div class="mt-10">
+    
+            </div>
+            @if($post->tags->isNotEmpty())
+                <div>
+                    <x-web::divider start>
+                        {{ __('Tags') }}
+                    </x-web::divider>
+                    <div class="flex flex-wrap gap-2">
+                        @foreach ($post->tags as $tag)
+                            <a href="{{ route('blog.index', ['tag' => $tag->name]) }}">
+                                <x-web::badge class="badge-secondary px-4">
+                                    {{ $tag->getWebName() }}
+                                </x-web::badge>
+                            </a>
+                        @endforeach
+                    </div>
+                    <x-web::divider />
+                </div>
+            @endif
         </div>  
     </div>
 </x-web::layout>

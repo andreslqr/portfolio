@@ -2,10 +2,13 @@
 
 namespace App\Models\Blog;
 
+use App\Support\Concerns\HasQueryLang;
 use App\Support\WebContentRender;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
@@ -14,6 +17,16 @@ use Illuminate\Support\Str;
 
 /**
  * @method static \Database\Factories\Blog\PostFactory factory()
+ * @property int $id
+ * @property string $image
+ * @property string $title
+ * @property string $slug
+ * @property string $short_description
+ * @property array  $content
+ * @property string $author
+ * @property \Illuminate\Support\Carbon $published_at
+ * @property \Illuminate\Support\Carbon $expired_at
+ * @property bool $is_active
  */
 class Post extends Model
 {
@@ -35,7 +48,7 @@ class Post extends Model
         'author',
         'published_at',
         'expired_at',
-        'is_active'
+        'is_active',
     ];
 
     /**
@@ -47,7 +60,7 @@ class Post extends Model
         'is_active' => 'boolean',
         'content' => 'array',
         'published_at' => 'datetime',
-        'expired_at' => 'datetime' 
+        'expired_at' => 'datetime',
     ];
 
     /**
@@ -69,8 +82,21 @@ class Post extends Model
         'title',
         'slug',
         'short_description',
-        'content'
+        'content',
     ];
+
+    /**
+     * Relationship with tags
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function tags(): BelongsToMany
+    {
+        return $this->belongsToMany(Tag::class)
+                    ->withPivot('order')
+                    ->withTimestamps()
+                    ->orderByPivot('order');
+    }
 
     /**
      * check if the model is published
@@ -161,21 +187,5 @@ class Post extends Model
     public function getWebContent()
     {
         return WebContentRender::make($this)->render();
-    }
-
-    /**
-     * Get the view for the content
-     * 
-     * @return \Illuminate\View
-     */
-    protected function getBlockContent($block)
-    {
-        return view(match($block['type']) {
-            'paragraph' => 'web::visualizers.paragraph',
-            'code' => 'web::visualizers.code',
-            default => 'web::visualizers.default'
-        }, [
-            'data' => $block['data']
-        ]);
     }
 }

@@ -37,7 +37,7 @@ class WebContentRender
 
     public function getBlocks()
     {
-        return array_map(fn($block) => $this->getBlockView($block), $this->post->content);
+        return array_map(fn($block) => $this->getBlockView($block), $this->post->content ?: []);
     }
     
     public function getBlockView($block)
@@ -53,5 +53,6 @@ class WebContentRender
             'data' => $block['data'],
             'webContentRender' => $this
         ]);
+        
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Blog;
 
 use App\Filament\Resources\Blog\PostResource\Pages;
+use App\Filament\Resources\Blog\PostResource\RelationManagers\TagsRelationManager;
 use App\Models\Blog\Post;
 use App\Models\Scopes\IsPublishedScope;
 use Filament\Forms\Components\Builder;
@@ -39,6 +40,8 @@ class PostResource extends Resource
     protected static ?string $model = Post::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-pencil-square';
+
+    protected static ?string $navigationGroup = 'Blog';
 
     public static function form(Form $form): Form
     {
@@ -253,7 +256,7 @@ class PostResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            TagsRelationManager::class
         ];
     }
 
