@@ -219,5 +219,12 @@
     "Read my CV": "Lee mi CV",
     "Copyright": "Derechos de autor",
     "All right reserved": "Todos los derechos reservados",
-    "Andres Lopez": "Andrés López"
+    "Andres Lopez": "Andrés López",
+    "Previous": "Anterior",
+    "Next": "Siguiente",
+    "Published": "Publicado",
+    "by": "por",
+    "The content can't be rendered beacuse there is no visualizer": "El contenido no puede ser renderizado ya que ni existe visualizador",
+    "Copy": "Copiar",
+    "Copied!": "¡Copiado!"
 }

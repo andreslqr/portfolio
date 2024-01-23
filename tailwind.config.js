@@ -20,15 +20,25 @@ export default {
             minHeight: {
                 '8-screen': '8vh',
                 '92-screen': '92vh'
-            } 
+            },
+            aspectRatio: {
+                'univision': '2/1'
+            }
         },
     },
+    safelist: [
+        'grid-cols-1',
+        'md:grid-cols-2',
+        'md:grid-cols-2',
+        'md:grid-cols-3',
+        'md:grid-cols-3'
+    ],
     plugins: [
         daisyUI
     ],
     daisyui: {
         themes: [
-            'bumblebee',
+            'corporate',
             'dim',
         ],
     }

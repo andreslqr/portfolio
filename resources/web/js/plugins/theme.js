@@ -5,7 +5,8 @@ export default function (Alpine) {
         themes: {
             dim: 'dim',
             bumblebee: 'bumblebee',
-            light: 'bumblebee',
+            corporate: 'corporate',
+            light: 'corporate',
             dark: 'dim'
         },
         name: 'dim',
