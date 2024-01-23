@@ -1,13 +1,13 @@
-<header class="navbar bg-base-100 sticky top-0 z-10 backdrop-blur bg-opacity-50 h-8-screen">
+<header class="navbar bg-base-200 sticky top-0 z-10 backdrop-blur bg-opacity-50 h-8-screen">
     <div class="navbar-start">
         <x-web::drawer.open class="btn btn-ghost lg:hidden">
             <x-heroicon-o-bars-3-center-left class="h-6 w-6" />
         </x-web::drawer.open>
 
-        <a href="{{ route('index') }}" class="btn btn-ghost text-xl sm:hidden">
+        <a href="{{ route('index') }}" class="btn btn-ghost text-primary text-xl sm:hidden">
             {{ __('Andres') }}
         </a>
-        <a href="{{ route('index') }}" class="btn btn-ghost text-xl hidden sm:inline-flex">
+        <a href="{{ route('index') }}" class="btn btn-ghost text-primary text-xl hidden sm:inline-flex">
             {{ __('Andres Portfolio') }}
         </a>
     </div>

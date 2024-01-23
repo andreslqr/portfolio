@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Http\Middleware\ConfigureLang;
+use App\Models\Blog\Post;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Folio\Folio;
 
