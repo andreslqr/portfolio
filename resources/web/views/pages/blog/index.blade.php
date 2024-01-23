@@ -16,6 +16,9 @@ name('blog.index');
             <x-web::breadcrumb.blog active />
         </x-web::breadcrumb>
         <div class="mt-10">
+            <h1 class="text-5xl font-bold text-center mb-16">
+                {{ __('Latest posts') }}
+            </h1>
             <livewire:web.list-posts>
         </div>
 

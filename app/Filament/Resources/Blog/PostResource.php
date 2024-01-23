@@ -25,6 +25,7 @@ use Filament\Forms\Set;
 use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
@@ -235,6 +236,8 @@ class PostResource extends Resource
                 //
             ])
             ->actions([
+                ViewAction::make()
+                        ->url(fn(Post $record) => $record->getWebUrl(), shouldOpenInNewTab: true),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([

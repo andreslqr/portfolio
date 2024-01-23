@@ -7,7 +7,17 @@ use App\Models\Blog\Post;
 
 name('blog.show');
 
-render(fn (View $view, $slug) => $view->with('post', Post::where('slug->' . app()->getLocale(), $slug)->with('tags')->firstOrFail()));
+render(function (View $view, $slug) {
+
+    $post = Post::select('content')->webQuery()->webFind($slug)->firstOrFail();
+    $relatedPosts = $post->relatedPosts()->select('short_description')->webQuery()->limit(4)->inRandomOrder()->get();
+    $latestPosts = Post::select('short_description')->webQuery()->whereKeyNot($post->getKey())->limit($relatedPosts->isEmpty() ? 8 : 4)->get();
+
+    return $view
+        ->with('post', $post)
+        ->with('relatedPosts', $relatedPosts)
+        ->with('latestPosts', $latestPosts);
+});
 
 ?>
 
@@ -21,7 +31,7 @@ render(fn (View $view, $slug) => $view->with('post', Post::where('slug->' . app(
             <x-web::breadcrumb.blog />
             <x-web::breadcrumb.post active :slug="$post->slug" :title="$post->title" />
         </x-web::breadcrumb>
-        <div class="mt-10 max-w-4xl mx-auto">
+        <div class="mt-10 mb-4 max-w-4xl mx-auto">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-8">
                 {{ $post->getWebTitle() }}
             </h1>
@@ -49,9 +59,38 @@ render(fn (View $view, $slug) => $view->with('post', Post::where('slug->' . app(
                             </a>
                         @endforeach
                     </div>
-                    <x-web::divider />
+                    
                 </div>
             @endif
+            <x-web::divider />
         </div>  
+        @if($relatedPosts->isNotEmpty())
+            <div class="my-10">
+
+                <h2 class="text-4xl font-bold text-center lg:text-start mb-8">
+                    {{ __('Related posts') }}
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                    @foreach ($relatedPosts as $post)
+                        <x-web::post :post="$post" />
+                    @endforeach
+        
+                </div>
+            </div>
+        @endif
+        @if($latestPosts->isNotEmpty())
+            <div class="my-10">
+
+                <h2 class="text-4xl font-bold text-center lg:text-start mb-8">
+                    {{ __('Latest posts') }}
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                    @foreach ($latestPosts as $post)
+                        <x-web::post :post="$post" />
+                    @endforeach
+        
+                </div>
+            </div>
+        @endif
     </div>
 </x-web::layout>

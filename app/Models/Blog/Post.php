@@ -2,7 +2,6 @@
 
 namespace App\Models\Blog;
 
-use App\Support\Concerns\HasQueryLang;
 use App\Support\WebContentRender;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
@@ -94,8 +93,33 @@ class Post extends Model
     {
         return $this->belongsToMany(Tag::class)
                     ->withPivot('order')
-                    ->withTimestamps()
-                    ->orderByPivot('order');
+                    ->withTimestamps();
+    }
+
+    /**
+     * Related posts 
+     * 
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function relatedPosts()
+    {
+        return $this->whereHas('tags', fn(Builder $query) => $query->whereKey($this->tags->pluck('id')))->whereKeyNot($this->getKey());
+    }
+
+    public function scopeWebQuery(Builder $query)
+    {
+        return $query->addSelect('id', 'title', 'slug', 'image', 'published_at')
+                    ->latest();
+    }
+
+    public function scopeWebFind(Builder $query, string $slug)
+    {
+        return $query->where('slug->' . app()->getLocale(), $slug);
+    }
+
+    public function scopeLatestPublished(Builder $query, $column = 'published_at')
+    {
+        return $query->orderBy($column, 'desc');
     }
 
     /**

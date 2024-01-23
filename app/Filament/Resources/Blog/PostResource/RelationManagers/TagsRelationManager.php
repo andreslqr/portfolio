@@ -50,6 +50,11 @@ class TagsRelationManager extends RelationManager
                 AttachAction::make()
                     ->preloadRecordSelect()
                     ->recordSelectSearchColumns(['name', 'description'])
+                    ->mutateFormDataUsing(function (array $data): array {
+                        $data['order'] = $this->getRelationship()->count() + 1;
+                
+                        return $data;
+                    })
             ])
             ->actions([
                 ViewAction::make(),

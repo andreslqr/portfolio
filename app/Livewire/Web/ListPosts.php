@@ -21,7 +21,9 @@ class ListPosts extends Component
     #[Computed]
     public function posts(): LengthAwarePaginator
     {
-        return Post::query()
+        return Post::select('short_description')
+                    ->webQuery()
+                    ->LatestPublished()
                     ->when($this->tag, fn(Builder $query, $tag) => $query->whereRelation('tags', 'name->' . app()->getLocale(), $tag))
                     ->paginate(12);
     }
