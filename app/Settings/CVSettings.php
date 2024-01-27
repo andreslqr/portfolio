@@ -16,7 +16,7 @@ class CVSettings extends Settings
     public string $location;
 
     public string $emailContact;
-    public string $numberContact;
+    public $numberContact;
     public array $extraLinks;
     public array $socialLinks;
 

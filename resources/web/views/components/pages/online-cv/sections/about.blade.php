@@ -8,9 +8,8 @@
             {{ __('About me') }}
         </h2>
     </x-web::divider>
-
     <div id="description">
-<x-markdown class="mt-8">
+<x-markdown class="mt-8 wysiwyg">
 {{ $profile->description }}
 </x-markdown>
     </div>
@@ -20,17 +19,27 @@
             {{ __('Skills') }}
         </h3>
         <div class="mt-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
                 @foreach($profile->skills as $skill)
+                    @php 
+                        $className = "skill-" . str()->random();
+                    @endphp
                     <div class="form-control">
                         <label class="label cursor-pointer gap-y-2 flex-col items-start">
                         <span class="label-text">{{ $skill['name'] }}</span> 
-                        <x-web::form.input.range :class='str($skill["name"])->slug()->prepend("skill-")->append("-{$loop->index}")' min="0" max="100" disabled />
+                            <x-web::form.input.range :class="$className" min="0" max="100" disabled />
+                            <div class="w-full flex justify-between text-xs px-2 font-thin">
+                                <span>|</span>
+                                <span>|</span>
+                                <span>|</span>
+                                <span>|</span>
+                                <span>|</span>
+                              </div>
                         </label>
                     </div>
                     @push('styles')
                         <style>
-                            {{ str($skill['name'])->slug()->prepend('.skill-')->append("-{$loop->index}") }} {
+                            .{{ $className }} {
                                 --range-shdw: {{ $skill['color'] }};
                             }
                         </style>
@@ -47,13 +56,17 @@
         <div class="mt-6">
             <div class="flex flex-wrap gap-2">
                 @foreach($profile->softSkills as $softSkill)
-                    <x-web::badge :class='str($softSkill["name"])->slug()->prepend("soft-skill-")->append("-{$loop->index}")'>
+                    @php 
+                        $className = "soft-skill-" . str()->random();
+                    @endphp
+                    <x-web::badge :class="$className">
                         {{ $softSkill['name'] }}
                     </x-web::badge>
                     @push('styles')
                         <style>
-                            {{ str($softSkill['name'])->slug()->prepend('.soft-skill-')->append("-{$loop->index}") }} {
+                            .{{ $className }} {
                                 background-color: {{ $softSkill['color'] }};
+                                color: {{ contrastColor($softSkill['color']) }}
                             }
                         </style>
                     @endpush

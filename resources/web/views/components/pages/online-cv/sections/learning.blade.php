@@ -8,10 +8,4 @@
             {{ __('Learning') }}
         </h2>
     </x-web::divider>
-
-    <div id="description">
-<x-markdown class="mt-8">
-{{ $profile->description }}
-</x-markdown>
-    </div>
 </div>
