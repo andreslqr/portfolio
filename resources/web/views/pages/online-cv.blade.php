@@ -11,7 +11,7 @@ render(fn (View $view, CVSettings $settings) => $view->with('profile', $settings
 ?>
 
 <x-web::layout class="bg-gradient-to-br from-base-100 to-primary h-92-screen overflow-auto relative" without-footer>
-    <div class="container mx-auto px-8 sm:px-4 relative">
+    <div class="container mx-auto px-8 sm:px-4 relative mb-16">
         <div class="mt-10">
 
         </div>
@@ -20,9 +20,9 @@ render(fn (View $view, CVSettings $settings) => $view->with('profile', $settings
             <x-web::breadcrumb.online-cv active />
         </x-web::breadcrumb>
         <div class="relative">
-            <div class="grid grid-cols-1 md:grid-cols-7 lg:grid-cols-12 gap-8 relative">
-                <x-web::pages.online-cv.sections.general :$profile class="md:col-span-3 lg:col-span-4 mt-36 relative md:sticky top-36 h-fit" />
-                <div class="md:col-span-4 lg:col-span-8 mt-32 md:mt-36 flex flex-col items-center lg:items-end gap-y-4" x-data="{ activeTab: 'about' }">
+            <div class="grid grid-cols-1 md:grid-cols-7 lg:grid-cols-12 gap-4 md:gap-8 relative">
+                <x-web::pages.online-cv.sections.general :$profile class="md:col-span-3 lg:col-span-4 mt-36 relative md:sticky top-0  md:top-36 h-fit" />
+                <div class="md:col-span-4 lg:col-span-8 md:mt-36 flex flex-col items-center lg:items-end gap-y-4" x-data="{ activeTab: 'about' }">
 
                     <x-web::card class="w-full lg:w-1/2 xl:w-3/5">
                         <x-slot:body class="grid grid-cols-3">
@@ -60,7 +60,7 @@ render(fn (View $view, CVSettings $settings) => $view->with('profile', $settings
                     </x-web::card>
                     
                     
-                    <x-web::card class="w-full">
+                    <x-web::card class="w-full h-full">
                         <x-web::pages.online-cv.sections.about :$profile x-bind:class="{'hidden': ! (activeTab == 'about'), 'block': activeTab == 'about'}"  />
                         <x-web::pages.online-cv.sections.works :$profile x-bind:class="{'hidden': ! (activeTab == 'works'), 'block': activeTab == 'works'}" />
                         <x-web::pages.online-cv.sections.learning :$profile x-bind:class="{'hidden': ! (activeTab == 'learning-career'), 'block': activeTab == 'learning-career'}" />

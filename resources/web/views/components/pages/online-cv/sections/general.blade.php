@@ -10,22 +10,22 @@
             </div>
         </x-web::avatar>
     </div>
-    <h1 class="text-4xl font-bold text-center mt-8">
+    <h1 class="text-4xl font-bold text-center mt-6">
         {{ $profile->name }} {{ $profile->lastName }}
     </h1>
     <h3 class="text-lg font-extralight text-center mt-2">
         {{ $profile->role }}
     </h3>
-    <div class="flex flex-wrap justify-center gap-4 px-0 sm:px-36 md:px-4 lg:px-0 mt-8">
+    <div class="flex flex-wrap justify-center gap-4 px-0 sm:px-36 md:px-4 lg:px-0 mt-4">
         @foreach($profile->socialLinks as $link)
             <x-web::button as-link external href="{{ $link['url'] }}" class="aspect-square p-2 hover:btn-accent">
                 <img src="{{ asset(Storage::url($link['logo'])) }}" alt="{{ __('image of :description', ['description' => $link['url']]) }}" />
             </x-web::button>
         @endforeach
     </div>
-    <x-web::menu class="bg-base-200 rounded-box mt-8">
-        <x-web::menu.item external href="tel:{{ $profile->numberContact }}">
-            <x-web::button outline class="w-12 btn-secondary btn-sm no-animation shadow-md shadow-secondary">
+    <x-web::menu class="bg-base-200 rounded-box mt-6">
+        <x-web::menu.item external href="tel:{{ $profile->numberContact }}" class="group">
+            <x-web::button outline class="w-12 btn-secondary btn-sm no-animation shadow-md shadow-secondary group-hover:btn-active">
                 <x-heroicon-s-device-phone-mobile class="h-4 w-4" />
             </x-web::button>
             <div class="flex flex-col">
@@ -38,8 +38,8 @@
             </div>
         </x-web::menu.item>
         <x-web::divider class="my-0" />
-        <x-web::menu.item external href="mailto:{{ $profile->emailContact }}">
-            <x-web::button outline class="w-12 btn-primary btn-sm no-animation shadow-md shadow-primary">
+        <x-web::menu.item external href="mailto:{{ $profile->emailContact }}" class="group">
+            <x-web::button outline class="w-12 btn-primary btn-sm no-animation shadow-md shadow-primary group-hover:btn-active">
                 <x-heroicon-s-inbox-arrow-down class="h-4 w-4" />
             </x-web::button>
             <div class="flex flex-col truncate">
@@ -52,8 +52,8 @@
             </div>
         </x-web::menu.item>
         <x-web::divider class="my-0"/>
-        <x-web::menu.item external href="http://maps.google.com/maps?q=:{{ $profile->location }}">
-            <x-web::button outline class="w-12 btn-accent btn-sm no-animation shadow-md shadow-accent">
+        <x-web::menu.item external href="http://maps.google.com/maps?q=:{{ $profile->location }}" class="group">
+            <x-web::button outline class="w-12 btn-accent btn-sm no-animation shadow-md shadow-accent group-hover:btn-active">
                 <x-heroicon-s-map-pin class="h-4 w-4" />
             </x-web::button>
             <div class="flex flex-col truncate">
@@ -67,8 +67,8 @@
         </x-web::menu.item>
         @foreach ($profile->extraLinks as $link)
             <x-web::divider class="my-0"/>
-            <x-web::menu.item external href="{{ $link['url'] }}">
-                <x-web::button outline class="w-12 btn-info btn-sm no-animation shadow-md shadow-info">
+            <x-web::menu.item external href="{{ $link['url'] }}" class="group">
+                <x-web::button outline class="w-12 btn-info btn-sm no-animation shadow-md shadow-info group-hover:btn-active">
                     <img src="{{ asset(Storage::url($link['logo'])) }}" class="max-w-full max-h-full" alt="{{ __('image of :description', ['description' => $link['url']]) }}">
                 </x-web::button>
                 <div class="flex flex-col truncate">
@@ -80,7 +80,7 @@
         @endforeach
 
     </x-web::menu> 
-    <div class="mt-8 flex justify-center">
+    <div class="mt-4 flex justify-center">
         <livewire:web.cv-downloader />
     </div>
 </x-web::card>

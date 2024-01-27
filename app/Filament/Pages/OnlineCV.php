@@ -165,9 +165,9 @@ class OnlineCV extends SettingsPage
                                                             ->disk('public')
                                                             ->imageEditor()
                                                             ->imageResizeMode('cover')
-                                                            ->imageResizeTargetWidth('200')
+                                                            ->imageResizeTargetWidth('400')
                                                             ->imageResizeTargetHeight('200')
-                                                            ->imageCropAspectRatio('1:1'),
+                                                            ->imageCropAspectRatio('2:1'),
                                                         TextInput::make('company')
                                                             ->required()
                                                             ->string()

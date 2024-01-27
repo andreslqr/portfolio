@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 
 if(!function_exists('contrastColor')) {
@@ -47,5 +48,23 @@ if(!function_exists('contrastColor')) {
             // if not, return white color.
             return '#FFFFFF';
         }
+    }
+}
+
+if(!function_exists('carbon')) {
+    /**
+     * Create a new Carbon instance.
+     *
+     * Please see the testing aids section (specifically static::setTestNow())
+     * for more on the possibility of this constructor returning a test instance.
+     *
+     * @param DateTimeInterface|string|null $time
+     * @param DateTimeZone|string|null      $tz
+     *
+     * @throws InvalidFormatException
+     */
+    function carbon($time = null, $tz = null) 
+    {
+        return new Carbon($time, $tz);
     }
 }
