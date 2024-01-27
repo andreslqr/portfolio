@@ -18,6 +18,7 @@ trait Translatable
     public function mountTranslatable(): void
     {
         $this->activeLocale = static::getDefaultTranslatableLocale();
+        $this->setLocale(static::getDefaultTranslatableLocale());
     }
 
     public static function getTranslatableLocales(): array
@@ -28,10 +29,16 @@ trait Translatable
     public function updatedActiveLocale(): void
     {
         $this->setLocale($this->activeLocale);
+        $this->fillForm();
     }
 
     public function setLocale(string $lang)
     {
         app()->setLocale($lang);
+    }
+
+    public function beforeSave()
+    {
+        $this->setLocale($this->activeLocale);
     }
 }

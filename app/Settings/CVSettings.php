@@ -8,6 +8,7 @@ class CVSettings extends Settings
 {
     public string $name;
     public string $lastName;
+    public string $role;
 
     public string $profilePicture;
 
@@ -27,6 +28,7 @@ class CVSettings extends Settings
 
     public static function group(): string
     {
+        
         return 'cv';
     }
 }

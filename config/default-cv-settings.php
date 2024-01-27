@@ -4,6 +4,7 @@ return [
     'es' => [
         'name' => 'Andrés',
         'lastName' => 'López',
+        'role' => 'Backend Developer',
 
         'profilePicture' => '',
 
@@ -37,6 +38,7 @@ return [
     'en' => [
         'name' => 'Andrés',
         'lastName' => 'López',
+        'role' => 'Backend Developer',
 
         'profilePicture' => '',
 

@@ -8,9 +8,9 @@ return new class extends SettingsMigration
     {
         foreach(config('default-cv-settings') as $lang => $settings)
         {
+            app()->setLocale($lang);
             foreach($settings as $keySetting => $valueSetting)
             {
-                app()->setLocale($lang);
                 $this->migrator->add("cv.{$keySetting}", $valueSetting);
             }
         }
@@ -18,6 +18,13 @@ return new class extends SettingsMigration
 
     public function down(): void
     {
-
+        foreach(config('default-cv-settings') as $lang => $settings)
+        {
+            app()->setLocale($lang);
+            foreach($settings as $keySetting => $valueSetting)
+            {
+                $this->migrator->deleteIfExists("cv.{$keySetting}");
+            }
+        }
     }
 };
