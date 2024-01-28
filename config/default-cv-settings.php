@@ -14,7 +14,7 @@ return [
         'emailContact' => 'me@andreslopez.com.mx',
         'numberContact' => '',
         'extraLinks' => [
-            'https://andreslopez.com.mx',
+
         ],
         'socialLinks' => [
             
@@ -48,7 +48,7 @@ return [
         'emailContact' => 'me@andreslopez.com.mx',
         'numberContact' => '',
         'extraLinks' => [
-            'https://andreslopez.com.mx',
+            
         ],
         'socialLinks' => [
             
