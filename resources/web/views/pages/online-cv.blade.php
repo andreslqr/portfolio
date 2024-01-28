@@ -21,7 +21,7 @@ render(fn (View $view, CVSettings $settings) => $view->with('profile', $settings
         </x-web::breadcrumb>
         <div class="relative">
             <div class="grid grid-cols-1 md:grid-cols-7 lg:grid-cols-12 gap-4 md:gap-8 relative">
-                <x-web::pages.online-cv.sections.general :$profile class="md:col-span-3 lg:col-span-4 mt-36 relative md:sticky top-0  md:top-36 h-fit" />
+                <x-web::pages.online-cv.sections.general :$profile class="md:col-span-3 lg:col-span-4 mt-8 sm:mt-36 relative md:sticky top-0  md:top-36 h-fit" />
                 <div class="md:col-span-4 lg:col-span-8 md:mt-36 flex flex-col items-center lg:items-end gap-y-4" x-data="{ activeTab: 'about' }">
 
                     <x-web::card class="w-full lg:w-1/2 xl:w-3/5">

@@ -22,7 +22,7 @@ class CVSettings extends Settings
 
     public array $skills;
     public array $softSkills;
-    public array $certificacions;
+    public array $certifications;
     public array $workExperience;
     public array $schoolCareer;
 

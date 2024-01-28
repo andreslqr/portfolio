@@ -25,7 +25,7 @@ return [
         'softSkills' => [
 
         ],
-        'certificacions' => [
+        'certifications' => [
 
         ],
         'workExperience' => [
@@ -59,7 +59,7 @@ return [
         'softSkills' => [
 
         ],
-        'certificacions' => [
+        'certifications' => [
 
         ],
         'workExperience' => [
