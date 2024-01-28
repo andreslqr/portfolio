@@ -23,21 +23,25 @@
             </x-web::button>
         @endforeach
     </div>
+    
     <x-web::menu class="bg-base-200 rounded-box mt-6">
-        <x-web::menu.item external href="tel:{{ $profile->numberContact }}" class="group">
-            <x-web::button outline class="w-12 btn-secondary btn-sm no-animation shadow-md shadow-secondary group-hover:btn-active">
-                <x-heroicon-s-device-phone-mobile class="h-4 w-4" />
-            </x-web::button>
-            <div class="flex flex-col">
-                <small class="text-small font-bold truncate">
-                    {{__('Phone') }}
-                </small>
-                <span class="truncate">
-                    {{ $profile->numberContact }}
-                </span>
-            </div>
-        </x-web::menu.item>
-        <x-web::divider class="my-0" />
+        @if($profile->numberContact)
+            <x-web::menu.item external href="tel:{{ $profile->numberContact }}" class="group">
+                <x-web::button outline class="w-12 btn-secondary btn-sm no-animation shadow-md shadow-secondary group-hover:btn-active">
+                    <x-heroicon-s-device-phone-mobile class="h-4 w-4" />
+                </x-web::button>
+                <div class="flex flex-col">
+                    <small class="text-small font-bold truncate">
+                        {{__('Phone') }}
+                    </small>
+                    <span class="truncate">
+                        {{ $profile->numberContact }}
+                    </span>
+                </div>
+            </x-web::menu.item>
+            <x-web::divider class="my-0" />
+        @endif
+        
         <x-web::menu.item external href="mailto:{{ $profile->emailContact }}" class="group">
             <x-web::button outline class="w-12 btn-primary btn-sm no-animation shadow-md shadow-primary group-hover:btn-active">
                 <x-heroicon-s-inbox-arrow-down class="h-4 w-4" />
@@ -51,6 +55,7 @@
                 </span>
             </div>
         </x-web::menu.item>
+         
         <x-web::divider class="my-0"/>
         <x-web::menu.item external href="http://maps.google.com/maps?q=:{{ $profile->location }}" class="group">
             <x-web::button outline class="w-12 btn-accent btn-sm no-animation shadow-md shadow-accent group-hover:btn-active">
@@ -65,6 +70,7 @@
                 </span>
             </div>
         </x-web::menu.item>
+         
         @foreach ($profile->extraLinks as $link)
             <x-web::divider class="my-0"/>
             <x-web::menu.item external href="{{ $link['url'] }}" class="group">
@@ -78,9 +84,10 @@
                 </div>
             </x-web::menu.item>
         @endforeach
-
+             
     </x-web::menu> 
+   
     <div class="mt-4 flex justify-center">
         <livewire:web.cv-downloader />
-    </div>
+    </div> 
 </x-web::card>

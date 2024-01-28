@@ -51,7 +51,7 @@
     </div>
     <div class="mt-8">
         <h3 class="text-3xl font-bold">
-            {{ __('Soft kills') }}
+            {{ __('Soft skills') }}
         </h3>
         <div class="mt-6">
             <div class="flex flex-wrap gap-2">

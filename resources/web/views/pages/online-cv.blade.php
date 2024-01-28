@@ -61,9 +61,9 @@ render(fn (View $view, CVSettings $settings) => $view->with('profile', $settings
                     
                     
                     <x-web::card class="w-full h-full">
-                        <x-web::pages.online-cv.sections.about :$profile x-bind:class="{'hidden': ! (activeTab == 'about'), 'block': activeTab == 'about'}"  />
-                        <x-web::pages.online-cv.sections.works :$profile x-bind:class="{'hidden': ! (activeTab == 'works'), 'block': activeTab == 'works'}" />
-                        <x-web::pages.online-cv.sections.learning :$profile x-bind:class="{'hidden': ! (activeTab == 'learning-career'), 'block': activeTab == 'learning-career'}" />
+                        <x-web::pages.online-cv.sections.about :$profile x-show="activeTab == 'about'" x-transition="" />
+                        <x-web::pages.online-cv.sections.works :$profile x-show="activeTab == 'works'" x-transition="" />
+                        <x-web::pages.online-cv.sections.learning :$profile x-show="activeTab == 'learning-career'" x-transition="" />
                     </x-web::card>
 
                 </div>

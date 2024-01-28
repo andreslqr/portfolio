@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Translator;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 
@@ -63,7 +64,7 @@ if(!function_exists('carbon')) {
      *
      * @throws InvalidFormatException
      */
-    function carbon($time = null, $tz = null) 
+    function carbon($time = null, $tz = null): Carbon
     {
         return new Carbon($time, $tz);
     }
