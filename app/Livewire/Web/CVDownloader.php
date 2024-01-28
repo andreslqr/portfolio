@@ -15,7 +15,7 @@ class CVDownloader extends Component
 
     public function render()
     {
-        return view('web::livewire.cv-downloader');
+        return view('web::livewire.c-v-downloader');
     }
 
    

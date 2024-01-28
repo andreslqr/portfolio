@@ -88,6 +88,6 @@
     </x-web::menu> 
    
     <div class="mt-4 flex justify-center">
-        <livewire:web.cv-downloader />
+        <livewire:web.c-v-downloader />
     </div> 
 </x-web::card>
