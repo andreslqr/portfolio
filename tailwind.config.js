@@ -15,11 +15,12 @@ export default {
             },
             height: {
                 '8-screen': '8vh',
-                '92-screen': '92vh'
+                '92-screen': '92vh',
+                '75-screen': '75vh'
             },
             minHeight: {
                 '8-screen': '8vh',
-                '92-screen': '92vh'
+                '92-screen': '92vh',
             },
             aspectRatio: {
                 'univision': '2/1'
