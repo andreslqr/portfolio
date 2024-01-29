@@ -2,22 +2,15 @@
 
 namespace App\Models\Scopes;
 
+use App\Models\Scopes\Concerns\HasMakeMethod;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Scope;
 use Illuminate\Support\Carbon;
 
 class IsPublishedScope implements Scope
-{
-    /**
-     * Returns an instance of the class
-     * 
-     * @return static
-     */
-    public static function make(): static
-    {
-        return app(static::class);
-    }
+{   
+    use HasMakeMethod;
     
     /**
      * Apply the scope to a given Eloquent query builder.
