@@ -26,7 +26,7 @@ class LangSelector extends Component
 
         $request->session()->put('lang', $this->lang);
 
-        return redirect()->route('index');
+        return redirect(request()->header('Referer'));
     }
 
     public function render()

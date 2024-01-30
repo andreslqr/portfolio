@@ -10,7 +10,7 @@ class CVDownloader extends Component
 {
     public function download()
     {
-        dd(43);
+        
     }
 
     public function render()
