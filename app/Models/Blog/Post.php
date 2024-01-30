@@ -13,6 +13,8 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Spatie\Translatable\HasTranslations;
 use Illuminate\Support\Str;
+use Spatie\Sitemap\Contracts\Sitemapable;
+use Spatie\Sitemap\Tags\Url;
 
 /**
  * @method static \Database\Factories\Blog\PostFactory factory()
@@ -27,7 +29,7 @@ use Illuminate\Support\Str;
  * @property \Illuminate\Support\Carbon $expired_at
  * @property bool $is_active
  */
-class Post extends Model
+class Post extends Model implements Sitemapable
 {
     use HasFactory;
     use SoftDeletes;
@@ -79,7 +81,6 @@ class Post extends Model
      */
     public $translatable = [
         'title',
-        'slug',
         'short_description',
         'content',
     ];
@@ -114,7 +115,7 @@ class Post extends Model
 
     public function scopeWebFind(Builder $query, string $slug)
     {
-        return $query->where('slug->' . app()->getLocale(), $slug);
+        return $query->where('slug', $slug);
     }
 
     public function scopeLatestPublished(Builder $query, $column = 'published_at')
@@ -211,5 +212,15 @@ class Post extends Model
     public function getWebContent()
     {
         return WebContentRender::make($this)->render();
+    }
+
+    /**
+     * Get the sitemap url
+     * 
+     * @return \Spatie\Sitemap\Tags\Url|string|array
+     */
+    public function toSitemapTag(): Url | string | array
+    {
+        return $this->getWebUrl();
     }
 }
