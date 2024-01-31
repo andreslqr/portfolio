@@ -1,4 +1,4 @@
-<section {{ $attributes->merge(['class' => 'hero min-h-screen bg-base-100']) }}>
+<section {{ $attributes->merge(['class' => 'hero min-h-92-screen bg-gradient-to-br from-base-100 to-primary']) }}>
     <div class="hero-content flex-col lg:flex-row-reverse">
         <img src="{{ Vite::asset('resources/web/images/3.webp') }}"
             alt="{{ __('image of :description', ['description' => __('')]) }}"
@@ -14,7 +14,7 @@
                 <x-web::button class="btn-primary" as-link href="{{ route('contact') }}">
                     {{ __('Contact me') }}
                 </x-web::button>
-                <x-web::button class="btn-secondary" as-link outline href="{{ route('online-cv') }}">
+                <x-web::button class="btn-primary-content" as-link outline href="{{ route('online-cv') }}">
                     {{__('Read my CV') }}
                 </x-web::button>
             </div>

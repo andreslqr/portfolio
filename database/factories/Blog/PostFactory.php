@@ -21,10 +21,7 @@ class PostFactory extends Factory
                 'en' => fake('en_US')->sentence(),
                 'es' => fake('es_ES')->sentence()
             ],
-            'slug' => [
-                'en' => fake('en_US')->unique()->slug(12),
-                'es' => fake('es_ES')->unique()->slug()
-            ],
+            'slug' => fake('en_US')->unique()->slug(12),
             'short_description' => [
                 'en' => fake('en_US')->text(),
                 'es' => fake('es_ES')->text()
