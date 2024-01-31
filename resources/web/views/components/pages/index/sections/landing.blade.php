@@ -15,8 +15,8 @@
             <p class="py-6 flex gap-3">
                 {{ __("LET'S CONNECT") }}
                 <x-feathericon-chevron-right class="text-accent" />
-                <a rel="noopener noreferrer" target="_blank" href="https://instagram.com/andres.lqr" class="hover:text-info hover:cursor-pointer">
-                    <x-feathericon-instagram />
+                <a rel="noopener noreferrer" target="_blank" href="https://github.com/andreslqr" class="hover:text-info hover:cursor-pointer">
+                    <x-feathericon-github />
                 </a>
                 <a rel="noopener noreferrer" target="_blank" href="https://linkedin.com/in/andresdevr" class="hover:text-info hover:cursor-pointer">
                     <x-feathericon-linkedin />

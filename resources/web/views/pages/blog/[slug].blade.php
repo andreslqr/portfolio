@@ -9,7 +9,7 @@ name('blog.show');
 
 render(function (View $view, $slug) {
 
-    $post = Post::select('content')->webQuery()->webFind($slug)->firstOrFail();
+    $post = Post::select('content', 'author')->webQuery()->webFind($slug)->firstOrFail();
     $relatedPosts = $post->relatedPosts()->select('short_description')->webQuery()->limit(4)->inRandomOrder()->get();
     $latestPosts = Post::select('short_description')->webQuery()->whereKeyNot($post->getKey())->limit($relatedPosts->isEmpty() ? 8 : 4)->get();
 
