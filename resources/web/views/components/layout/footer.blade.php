@@ -3,8 +3,8 @@
         <p class="w-full">© {{ __('Copyright') }} {{ now()->year }} - {{ __('All right reserved') }}, {{ __('Andres Lopez')  }}.</p>
     </aside>
     <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-        <a rel="noopener noreferrer" target="_blank" href="https://instagram.com/andres.lqr" class="hover:text-info hover:cursor-pointer">
-            <x-feathericon-instagram />
+        <a rel="noopener noreferrer" target="_blank" href="https://github.com/andreslqr" class="hover:text-info hover:cursor-pointer">
+            <x-feathericon-github />
         </a>
         <a rel="noopener noreferrer" target="_blank" href="https://linkedin.com/in/andresdevr" class="hover:text-info hover:cursor-pointer">
             <x-feathericon-linkedin />
