@@ -27,7 +27,7 @@
                     <div class="form-control">
                         <label class="label cursor-pointer gap-y-2 flex-col items-start">
                         <span class="label-text">{{ $skill['name'] }}</span> 
-                            <x-web::form.input.range :class="$className" min="0" max="100" disabled />
+                            <x-web::form.input.range :class="$className" min="0" max="100" :value="$skill['value']" disabled />
                             <div class="w-full flex justify-between text-xs px-2 font-thin">
                                 <span>|</span>
                                 <span>|</span>
