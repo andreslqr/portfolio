@@ -1,14 +1,14 @@
 {
-    "name": "Andres Portfolio",
-    "short_name": "Andres Portfolio",
+    "name": "Andr\u00e9s Portafolio",
+    "short_name": "Andr\u00e9s Portafolio",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png",
+            "src": "/meta/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png",
+            "src": "/meta/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
