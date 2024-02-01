@@ -214,7 +214,7 @@
     "LET'S CONNECT": "CONTÁCTAME",
     "...or keep scrolling it's free.": "...o, sigue bajando, eres libre.",
     "About me": "Acerca de mí",
-    "I'm a passionate about the software and the research of innovative and scalable solutions, with experience in Agile methodologies and team leadership.": "Soy un apasionado por el software y de la creación de soluciones innovadoras y escalables, con experiencia en metodologías Ágiles y el liderazgo de equipos.",
+    "I'm a passionate about the software and the research of innovative and scalable solutions, with experience in Agile methodologies and team leadership.": "Soy un apasionado por el software y la creación de soluciones innovadoras y escalables, con experiencia sólida en metodologías Ágiles y liderazgo de equipos. Estoy comprometido con la mejora continua y la búsqueda constante de nuevas oportunidades para aplicar mis habilidades y conocimientos en el campo del desarrollo de software.",
     "Contact me": "Contáctame",
     "Read my CV": "Lee mi CV",
     "Copyright": "Derechos de autor",
@@ -266,6 +266,9 @@
     "Check my latest posts": "Checa mis últimas publicaciones",
     "See more": "Ver más",
     "Check the source code of this site": "Revisa el código de este sitio",
-    "Check the repository in Github or contact me if you have in mind a project :).": "Puedes revisar el repositorio de Github o contáctame si tienes un proyecto en mente :).",
-    "Github": "Github"
+    "Check the repository in Github or contact me if you have in mind a project :).": "Explora mi repositorio en GitHub para ver el código base que da vida a este sitio. Si tienes alguna idea en mente o necesitas ayuda con un proyecto, contáctame. ¡Estoy aquí para colaborar! :D",
+    "Github": "Github",
+    "meta.home.title": "Andrés López | Desarrollador de Software",
+    "meta.home.description": "Andrés López, apasionado por el software y la creación de soluciones innovadoras y escalables. Experto en liderar equipos, desarrollo full stack, e-commerce, y creación de paquetes reutilizables. Explora su repositorio en GitHub y contáctalo para colaborar en proyectos.",
+    "meta.home.keywords": "Andrés López, Desarrollador de Software, Liderazgo de Equipos, Desarrollo Full Stack, E-Commerce, Desarrollo de Paquetes, Metodologías Ágiles, Mejora Continua"
 }

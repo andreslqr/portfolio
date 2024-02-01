@@ -15,7 +15,16 @@ render(
 
 ?>
 
+
 <x-web::layout>
+   <x-slot:meta>
+      <title>
+         {{ __("meta.home.title") }}
+      </title>
+      <meta title="description" content="{{ __('meta.home.description') }}">
+      <meta title="keywords" content="{{ __('meta.home.keywords') }}">
+   </x-slot:meta>
+
    <x-web::pages.index.sections.landing />
    <x-web::pages.index.sections.about-me />
    <x-web::pages.index.sections.services />

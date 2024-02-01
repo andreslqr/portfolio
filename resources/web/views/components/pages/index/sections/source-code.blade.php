@@ -10,7 +10,7 @@
             <h2 class="text-5xl font-bold text-secondary text-start md:text-center">
                 {{ __("Check the source code of this site") }}
             </h2>
-            <p class="py-6 gap-3 text-xl text-start md:text-center">
+            <p class="py-6 gap-3 text-xl text-start md:text-center mx-0 lg:mx-16">
                 {{ __('Check the repository in Github or contact me if you have in mind a project :).') }}
             </p>
             <div class="flex justify-center gap-x-4 mt-4">

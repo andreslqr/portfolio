@@ -267,5 +267,8 @@
     "See more": "See more",
     "Check the source code of this site": "Check the source code of this site",
     "Check the repository in Github or contact me if you have in mind a project :).": "Check the repository in Github or contact me if you have in mind a project :).",
-    "Github": "Github"
+    "Github": "Github",
+    "meta.home.title": "Andres Lopez - Software Developer",
+    "meta.home.description": "Andres Lopez, passionate about software and creating innovative and scalable solutions. Expert in team leadership, full-stack development, e-commerce, and creating reusable packages. Explore his GitHub repository and contact him to collaborate on projects.",
+    "meta.home.keywords": "Andres Lopez, Software Developer, Team Leadership, Full Stack Development, E-Commerce, Package Development, Agile Methodologies, Continuous Improvement"
 }
