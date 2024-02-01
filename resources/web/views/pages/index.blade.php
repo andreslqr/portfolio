@@ -15,7 +15,15 @@ render(
 
 ?>
 
+
 <x-web::layout>
+   <x-slot:meta>
+      <title>
+         {{ __("Andres Portfolio") }}
+      </title>
+      <meta title="description" content="{{ __('') }}">
+   </x-slot:meta>
+
    <x-web::pages.index.sections.landing />
    <x-web::pages.index.sections.about-me />
    <x-web::pages.index.sections.services />
