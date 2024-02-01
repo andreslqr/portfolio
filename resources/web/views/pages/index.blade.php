@@ -21,8 +21,8 @@ render(
       <title>
          {{ __("meta.home.title") }}
       </title>
-      <meta title="description" content="{{ __('meta.home.description') }}">
-      <meta title="keywords" content="{{ __('meta.home.keywords') }}">
+      <meta name="description" content="{{ __('meta.home.description') }}">
+      <meta name="keywords" content="{{ __('meta.home.keywords') }}">
    </x-slot:meta>
 
    <x-web::pages.index.sections.landing />
