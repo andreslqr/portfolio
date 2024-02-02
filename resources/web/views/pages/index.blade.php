@@ -23,6 +23,9 @@ render(
       </title>
       <meta name="description" content="{{ __('meta.home.description') }}">
       <meta name="keywords" content="{{ __('meta.home.keywords') }}">
+      <meta property="og:title" content="{{ __('Andres Portfolio') }}" />
+      <meta property=”og:description content="{{ __('meta.home.og:description') }}" />
+      <meta property="og:image" content="{{ Vite::asset('resources/web/images/1.webp') }}" />
    </x-slot:meta>
 
    <x-web::pages.index.sections.landing />
