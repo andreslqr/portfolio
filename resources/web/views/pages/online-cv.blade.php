@@ -7,10 +7,20 @@ use App\Settings\CVSettings;
 
 name('online-cv');
 
-render(fn (View $view, CVSettings $settings) => $view->with('profile', $settings));
+render(fn(View $view, CVSettings $settings) => $view->with('profile', $settings));
 ?>
 
 <x-web::layout class="bg-gradient-to-br from-base-100 to-primary h-92-screen overflow-auto relative" without-footer>
+    <x-slot:meta>
+        <title>
+            {{ __('meta.online-cv.title') }}
+        </title>
+        <meta name="description" content="{{ $profile->description }}">
+        <meta name="keywords" content="{{ __('meta.online-cv.keywords') }}">
+        <meta property="og:title" content="{{ __('meta.online-cv.og:title') }}" />
+        <meta property=”og:description content="{{ $profile->description }}" />
+        <meta property="og:image" content="{{ asset(Storage::url($profile->profilePicture)) }}" />
+    </x-slot:meta>
     <div class="container mx-auto px-8 sm:px-4 relative mb-16">
         <div class="mt-10">
 
@@ -21,49 +31,65 @@ render(fn (View $view, CVSettings $settings) => $view->with('profile', $settings
         </x-web::breadcrumb>
         <div class="relative">
             <div class="grid grid-cols-1 md:grid-cols-7 lg:grid-cols-12 gap-4 md:gap-8 relative">
-                <x-web::pages.online-cv.sections.general :$profile class="md:col-span-3 lg:col-span-4 mt-8 sm:mt-36 relative md:sticky top-0  md:top-36 h-fit" />
-                <div class="md:col-span-4 lg:col-span-8 md:mt-36 flex flex-col items-center lg:items-end gap-y-4" x-data="{ activeTab: 'about' }">
+                <x-web::pages.online-cv.sections.general :$profile
+                    class="md:col-span-3 lg:col-span-4 mt-8 sm:mt-36 relative md:sticky top-0  md:top-36 h-fit" />
+                <div class="md:col-span-4 lg:col-span-8 md:mt-36 flex flex-col items-center lg:items-end gap-y-4"
+                    x-data="{ activeTab: 'about' }">
 
                     <x-web::card class="w-full lg:w-1/2 xl:w-3/5">
                         <x-slot:body class="grid grid-cols-3">
-                            <label class="btn h-full py-4" :class="{'btn-primary': activeTab == 'about'}">
+                            <label class="btn h-full py-4" :class="{ 'btn-primary': activeTab == 'about' }">
                                 <div class="flex flex-col items-center">
-                                    <x-heroicon-o-user-circle class="h-6 w-6" x-bind:class="{'hidden': activeTab == 'about', 'block': ! (activeTab == 'about')}" />
-                                    <x-heroicon-s-user-circle class="h-6 w-6 hidden" x-bind:class="{'hidden': ! (activeTab == 'about'), 'block': activeTab == 'about'}" />
+                                    <x-heroicon-o-user-circle class="h-6 w-6"
+                                        x-bind:class="{ 'hidden': activeTab == 'about', 'block': !(activeTab == 'about') }" />
+                                    <x-heroicon-s-user-circle class="h-6 w-6 hidden"
+                                        x-bind:class="{ 'hidden': !(activeTab == 'about'), 'block': activeTab == 'about' }" />
                                     <h3 class="text-lg">
-                                        {{__('About')  }}
+                                        {{ __('About') }}
                                     </h3>
                                 </div>
-                                <input class="hidden" type="radio" value="about" name="tabs" x-model="activeTab" />
+                                <input class="hidden" type="radio" value="about" name="tabs"
+                                    x-model="activeTab" />
                             </label>
-                            <label class="btn h-full py-4" :class="{'btn-primary': activeTab == 'works'}">
+                            <label class="btn h-full py-4" :class="{ 'btn-primary': activeTab == 'works' }">
                                 <div class="flex flex-col items-center">
-                                    <x-heroicon-o-briefcase class="h-6 w-6" x-bind:class="{'hidden': activeTab == 'works', 'block': ! (activeTab == 'works')}" />
-                                    <x-heroicon-s-briefcase class="h-6 w-6 hidden" x-bind:class="{'hidden': ! (activeTab == 'works'), 'block': activeTab == 'works'}" />
+                                    <x-heroicon-o-briefcase class="h-6 w-6"
+                                        x-bind:class="{ 'hidden': activeTab == 'works', 'block': !(activeTab == 'works') }" />
+                                    <x-heroicon-s-briefcase class="h-6 w-6 hidden"
+                                        x-bind:class="{ 'hidden': !(activeTab == 'works'), 'block': activeTab == 'works' }" />
                                     <h3 class="text-lg">
-                                        {{__('Works')  }}
+                                        {{ __('Works') }}
                                     </h3>
                                 </div>
-                                <input class="hidden" type="radio" value="works" name="tabs" x-model="activeTab" />
+                                <input class="hidden" type="radio" value="works" name="tabs"
+                                    x-model="activeTab" />
                             </label>
-                            <label class="btn h-full py-4" :class="{'btn-primary': activeTab == 'learning-career'}">
+                            <label class="btn h-full py-4" :class="{ 'btn-primary': activeTab == 'learning-career' }">
                                 <div class="flex flex-col items-center">
-                                    <x-heroicon-o-academic-cap class="h-6 w-6" x-bind:class="{'hidden': activeTab == 'learning-career', 'block': ! (activeTab == 'learning-career')}" />
-                                    <x-heroicon-s-academic-cap class="h-6 w-6 hidden" x-bind:class="{'hidden': ! (activeTab == 'learning-career'), 'block': activeTab == 'learning-career'}" />
+                                    <x-heroicon-o-academic-cap class="h-6 w-6"
+                                        x-bind:class="{ 'hidden': activeTab == 'learning-career', 'block': !(activeTab ==
+                                                'learning-career') }" />
+                                    <x-heroicon-s-academic-cap class="h-6 w-6 hidden"
+                                        x-bind:class="{ 'hidden': !(activeTab == 'learning-career'), 'block': activeTab ==
+                                                'learning-career' }" />
                                     <h3 class="text-lg">
-                                        {{__('Learning')  }}
+                                        {{ __('Learning') }}
                                     </h3>
                                 </div>
-                                <input class="hidden" type="radio" value="learning-career" name="tabs" x-model="activeTab" />
+                                <input class="hidden" type="radio" value="learning-career" name="tabs"
+                                    x-model="activeTab" />
                             </label>
                         </x-slot:body>
                     </x-web::card>
-                    
-                    
+
+
                     <x-web::card class="w-full h-full">
-                        <x-web::pages.online-cv.sections.about :$profile x-show="activeTab == 'about'" x-transition="" />
-                        <x-web::pages.online-cv.sections.works :$profile x-show="activeTab == 'works'" x-transition="" />
-                        <x-web::pages.online-cv.sections.learning :$profile x-show="activeTab == 'learning-career'" x-transition="" />
+                        <x-web::pages.online-cv.sections.about :$profile x-show="activeTab == 'about'"
+                            x-transition="" />
+                        <x-web::pages.online-cv.sections.works :$profile x-show="activeTab == 'works'"
+                            x-transition="" />
+                        <x-web::pages.online-cv.sections.learning :$profile x-show="activeTab == 'learning-career'"
+                            x-transition="" />
                     </x-web::card>
 
                 </div>

@@ -24,6 +24,10 @@ export default {
             },
             aspectRatio: {
                 'univision': '2/1'
+            },
+            zIndex: {
+                '0': '0',
+                '1': '1'
             }
         },
     },

@@ -171,7 +171,10 @@ class Post extends Model implements Sitemapable
      */
     public function getWebTitle(): ?string
     {
-        return Str::of($this->title)->apa()->toString();
+        if($this->title)
+            return Str::of($this->title)->apa()->toString();
+
+        return null;
     }
 
     /**
