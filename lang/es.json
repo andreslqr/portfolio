@@ -271,5 +271,20 @@
     "meta.home.title": "Andrés López | Desarrollador de Software",
     "meta.home.description": "Andrés López, apasionado por el software y la creación de soluciones innovadoras y escalables. Experto en liderar equipos, desarrollo full stack, e-commerce, y creación de paquetes reutilizables. Explora su repositorio en GitHub y contáctalo para colaborar en proyectos.",
     "meta.home.keywords": "Andrés López, Desarrollador de Software, Liderazgo de Equipos, Desarrollo Full Stack, E-Commerce, Desarrollo de Paquetes, Metodologías Ágiles, Mejora Continua",
-    "meta.home.og:description": "¡Hola! Soy Andrés López. Descubre mi pasión por liderar equipos, desarrollar soluciones full stack y trabajar en proyectos de e-commerce. Explora mi repositorio en GitHub y conéctate para explorar nuevas oportunidades. ¡Estoy aquí para ayudar y colaborar! 😊"
+    "meta.home.og:title": "Portafolio de Andrés",
+    "meta.home.og:description": "¡Hola! Soy Andrés López. Descubre mi pasión por liderar equipos, desarrollar soluciones full stack y trabajar en proyectos de e-commerce. Explora mi repositorio en GitHub y conéctate para explorar nuevas oportunidades. ¡Estoy aquí para ayudar y colaborar! 😊",
+    "meta.blog.title": "Andrés López | Blog",
+    "meta.blog.description": "Explora mis últimas publicaciones acerca de software, programación, paquetes de desarrollo y buenas prácticas.",
+    "meta.blog.keywords": "Andrés López, Desarrollador de Software, Líderazgo, Desarrollo Full Stack, E-Commerce, Desarrollo de paquetes, Metodologías Agíles, Integración continua",
+    "meta.blog.og:title": "Andrés Blog",
+    "meta.blog.og:description": "Explora mis últimas publicaciones acerca de software, programación, paquetes de desarrollo y buenas prácticas.",
+    "meta.online-cv.title": "Andrés López | CV en línea",
+    "meta.online-cv.keywords": "Andrés López, Desarrollador de Software, Líderazgo, Desarrollo Full Stack, E-Commerce, Desarrollo de paquetes, Metodologías Agíles, Integración continua",
+    "meta.online-cv.og:title": "Curriculum en línea de Andrés López",
+    "meta.online-cv.og:description": "Conoce acerca de mí, habilidades, mi experiencia laboral y mi carrera de aprendizaje.",
+    "meta.contact.title": "Andrés López | Contacto",
+    "meta.contact.description": "Llena el chat de contacto para comunicarte con Andrés López, un desarrollador dedicado. Cualquier cosa que necesites, un proyecto, una idea en mente o discutir alguna potencial colaboración, sienteté libre de contactar, estoy listo para responderte y hacer posible tus metas de software.",
+    "meta.contact.keywords": "Andrés López, Desarrollador de Software, Líderazgo, Desarrollo Full Stack, E-Commerce, Desarrollo de paquetes, Metodologías Agíles, Integración continua",
+    "meta.contact.og:title": "Contáctame",
+    "meta.contact.og:description": "Llena el chat de contacto para comunicarte con Andrés López, un desarrollador dedicado. Cualquier cosa que necesites, un proyecto, una idea en mente o discutir alguna potencial colaboración, sienteté libre de contactar, estoy listo para responderte y hacer posible tus metas de software."
 }

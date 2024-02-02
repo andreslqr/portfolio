@@ -271,5 +271,20 @@
     "meta.home.title": "Andres Lopez | Software Developer",
     "meta.home.description": "Andres Lopez, passionate about software and creating innovative and scalable solutions. Expert in team leadership, full-stack development, e-commerce, and creating reusable packages. Explore his GitHub repository and contact him to collaborate on projects.",
     "meta.home.keywords": "Andres Lopez, Software Developer, Team Leadership, Full Stack Development, E-Commerce, Package Development, Agile Methodologies, Continuous Improvement",
-    "meta.home.og:description": "Hello! I'm Andres Lopez. Explore my passion for leading teams, developing full-stack solutions, and working on e-commerce projects. Check out my GitHub repository and connect to explore new opportunities. I'm here to help and collaborate! 😊"
+    "meta.home.og:title": "Andres Portfolio",
+    "meta.home.og:description": "Hello! I'm Andres Lopez. Explore my passion for leading teams, developing full-stack solutions, and working on e-commerce projects. Check out my GitHub repository and connect to explore new opportunities. I'm here to help and collaborate! 😊",
+    "meta.blog.title": "Andres Lopez | Blog",
+    "meta.blog.description": "Check my latest posts about software, programming, package development and good practices.",
+    "meta.blog.keywords": "Andres Lopez, Software Developer, Team Leadership, Full Stack Development, E-Commerce, Package Development, Agile Methodologies, Continuous Improvement",
+    "meta.blog.og:title": "Andres Blog",
+    "meta.blog.og:description": "Check my latest posts about software, programming, package development and good practices.",
+    "meta.online-cv.title": "Andres Lopez | Online CV",
+    "meta.online-cv.keywords": "Andres Lopez, Software Developer, Team Leadership, Full Stack Development, E-Commerce, Package Development, Agile Methodologies, Continuous Improvement",
+    "meta.online-cv.og:title": "Andres Lopez Online CV",
+    "meta.online-cv.og:description": "Andres, Check my profile: about me, skills, my works and my learning career.",
+    "meta.contact.title": "Andres Lopez | Contact",
+    "meta.contact.description": "Complete the contact chat to get in touch with Andres Lopez, a dedicated software developer. Whether you need assistance with a project, have an idea in mind, or want to discuss potential collaborations, feel free to reach out. Your message is important, and Andres is ready to respond promptly. Let's start a conversation and bring your software development goals to life!",
+    "meta.contact.keywords": "Andres Lopez, Software Developer, Team Leadership, Full Stack Development, E-Commerce, Package Development, Agile Methodologies, Continuous Improvement",
+    "meta.contact.og:title": "Contact me",
+    "meta.contact.og:description": "Complete the contact chat to get in touch with Andres Lopez, a dedicated software developer. Whether you need assistance with a project, have an idea in mind, or want to discuss potential collaborations, feel free to reach out. Your message is important, and Andres is ready to respond promptly. Let's start a conversation and bring your software development goals to life!"
 }

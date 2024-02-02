@@ -8,10 +8,22 @@ use App\Models\Blog\Post;
 name('blog.show');
 
 render(function (View $view, $slug) {
-
-    $post = Post::select('content', 'author')->webQuery()->webFind($slug)->firstOrFail();
-    $relatedPosts = $post->relatedPosts()->select('short_description')->webQuery()->limit(4)->inRandomOrder()->get();
-    $latestPosts = Post::select('short_description')->webQuery()->whereKeyNot($post->getKey())->limit($relatedPosts->isEmpty() ? 8 : 4)->get();
+    $post = Post::select('short_description', 'content', 'author')
+        ->webQuery()
+        ->webFind($slug)
+        ->firstOrFail();
+    $relatedPosts = $post
+        ->relatedPosts()
+        ->select('short_description')
+        ->webQuery()
+        ->limit(4)
+        ->inRandomOrder()
+        ->get();
+    $latestPosts = Post::select('short_description')
+        ->webQuery()
+        ->whereKeyNot($post->getKey())
+        ->limit($relatedPosts->isEmpty() ? 8 : 4)
+        ->get();
 
     return $view
         ->with('post', $post)
@@ -22,6 +34,16 @@ render(function (View $view, $slug) {
 ?>
 
 <x-web::layout class="bg-gradient-to-b from-base-100 to-base-300">
+    <x-slot:meta>
+        <title>
+            {{ __('Andres Lopez') }} | {{ $post->getWebTitle() }}
+        </title>
+        <meta name="description" content="{{ $post->getWebShortDescription() }}">
+        <meta name="keywords" content="{{ $post->tags->pluck('name')->join(',') }}">
+        <meta property="og:title" content="{{ $post->getWebTitle() }}" />
+        <meta property=”og:description content="{{ $post->getWebShortDescription() }}" />
+        <meta property="og:image" content="{{ $post->getWebImage() }}" />
+    </x-slot:meta>
     <div class="container mx-auto px-8 sm:px-4 min-h-screen">
         <div class="mt-10">
 
@@ -36,16 +58,18 @@ render(function (View $view, $slug) {
                 {{ $post->getWebTitle() }}
             </h1>
             <p class="mt-4 text-sm mb-8">
-                <span>{{ __('Published') }}</span> <span>{{ $post->getWebPublishedAt() }}</span> <span>{{ __('by') }}</span> <span>{{ $post->getWebAuthor() }}</span>
+                <span>{{ __('Published') }}</span> <span>{{ $post->getWebPublishedAt() }}</span>
+                <span>{{ __('by') }}</span> <span>{{ $post->getWebAuthor() }}</span>
             </p>
-            <img class="rounded-lg aspect-univision shadow-2xl" src="{{ $post->getWebImage() }}" alt="{{ __('image of :description', ['description' => $post->getWebTitle()]) }}">
+            <img class="rounded-lg aspect-univision shadow-2xl" src="{{ $post->getWebImage() }}"
+                alt="{{ __('image of :description', ['description' => $post->getWebTitle()]) }}">
             <div id="content" class="mt-10">
                 {{ $post->getWebContent() }}
             </div>
             <div class="mt-10">
-    
+
             </div>
-            @if($post->tags->isNotEmpty())
+            @if ($post->tags->isNotEmpty())
                 <div>
                     <x-web::divider start>
                         {{ __('Tags') }}
@@ -59,12 +83,12 @@ render(function (View $view, $slug) {
                             </a>
                         @endforeach
                     </div>
-                    
+
                 </div>
             @endif
             <x-web::divider />
-        </div>  
-        @if($relatedPosts->isNotEmpty())
+        </div>
+        @if ($relatedPosts->isNotEmpty())
             <div class="my-10">
 
                 <h2 class="text-4xl font-bold text-center lg:text-start mb-8">
@@ -74,11 +98,11 @@ render(function (View $view, $slug) {
                     @foreach ($relatedPosts as $post)
                         <x-web::post :post="$post" />
                     @endforeach
-        
+
                 </div>
             </div>
         @endif
-        @if($latestPosts->isNotEmpty())
+        @if ($latestPosts->isNotEmpty())
             <div class="my-10">
 
                 <h2 class="text-4xl font-bold text-center lg:text-start mb-8">
@@ -88,7 +112,7 @@ render(function (View $view, $slug) {
                     @foreach ($latestPosts as $post)
                         <x-web::post :post="$post" />
                     @endforeach
-        
+
                 </div>
             </div>
         @endif
