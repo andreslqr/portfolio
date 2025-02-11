@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     strict: true
   },
   extends: [
-    ['github:red-plug/layers-nutrix', { auth: process.env.GITHUB_TOKEN }]
+    // ['github:red-plug/layers-nutrix', { auth: process.env.GITHUB_TOKEN }]
   ],
   modules: [
     '@pinia/nuxt',
