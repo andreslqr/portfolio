@@ -1,0 +1,23 @@
+@layer tailwind-base, primevue, tailwind-utilities;
+
+@layer tailwind-base {
+    @tailwind base;
+    :root {
+        --color-red-plug-50: 255 241 242;
+        --color-red-plug-100: 255 223 226;
+        --color-red-plug-200: 255 197 202;
+        --color-red-plug-300: 255 157 165;
+        --color-red-plug-400: 255 100 113;
+        --color-red-plug-500: 255 38 56;
+        --color-red-plug-600: 237 21 39;
+        --color-red-plug-700: 200 13 29;
+        --color-red-plug-800: 165 15 27;
+        --color-red-plug-900: 136 20 30;
+        --color-red-plug-950: 75 4 10;
+    }
+}
+
+@layer tailwind-utilities {
+    @tailwind components;
+    @tailwind utilities;
+}

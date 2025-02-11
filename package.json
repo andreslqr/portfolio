@@ -1,0 +1,30 @@
+{
+  "name": "red-plug-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/icon": "^1.5.2",
+    "@nuxtjs/color-mode": "^3.5.1",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "@pinia/nuxt": "^0.5.4",
+    "@primevue/themes": "^4.1.0",
+    "nuxt": "^3.13.0",
+    "pinia": "^2.2.2",
+    "primevue": "^4.1.0",
+    "tailwindcss-primeui": "^0.3.4",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@primevue/nuxt-module": "^4.1.0",
+    "typescript": "^5.6.2",
+    "vue-tsc": "^2.1.6"
+  }
+}
