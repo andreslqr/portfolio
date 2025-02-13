@@ -1,46 +1,50 @@
 <template>
-    <Drawer v-model:visible="showMenu" header="Red Plug">
-        <div>
-
-            <Button label="About" text plain active fluid />
-                <Button label="Services" text plain fluid />
-                <Button label="Pricing" text plain fluid />
-        </div>
-    </Drawer>
-    <Toolbar>
-        <template #start>
-            <Button rounded outlined class="px-8 hidden md:block">
-                Red Plug
-            </Button>
-            <Button type="button" severity="secondary" class="block md:hidden" @click="showMenu = true">
-                <template #icon>
-                    <Icon name="heroicons:bars-3" />
-                </template>
-            </Button>
-            <div class="hidden md:flex gap-x-2 ms-5">
-                <Button label="About" text plain active />
-                <Button label="Services" text plain />
-                <Button label="Pricing" text plain />
-            </div>
+    <Drawer v-model:visible="showMenu">
+        <template #header>
+            <HyperText text="ANDRÉS LÓPEZ" class="font-awesome text-2xl text-primary" />
         </template>
-
-        <template #center>
-            <Button rounded outlined class=" px-4 sm:px-8 block md:hidden">
-                Red Plug
-            </Button>
-            
-        </template>
-
-        <template #end>
+        <AppMenu />
+        <template #footer>
             <div class="flex items-center gap-2">
-                <DarkModeSwitch />
+                <LangSwitch size="large" class="w-full md:w-auto"></LangSwitch>
             </div>
         </template>
-    </Toolbar>
+    </Drawer>
+    <header class="py-2 sticky top-0 transition-colors duration-500" :class="{'bg-surface-900': showHeaderBackground}">
+        <div class="container mx-auto">
+            <nav class="flex justify-between p-2 items-center">
+                <div class="block md:hidden">
+                    <Button text size="large" @click="toggleMenu" severity="secondary">
+                        <Icon name="heroicons:bars-3" class="text-2xl"/>
+                    </Button>
+                </div>
+                <div>
+                    <AppLogo />
+                </div>
+                <div class="hidden md:block">
+                    <AppMenu />
+                </div>
+                <div class="block md:hidden">
+                    <DarkModeSwitch />
+                </div>
+            </nav>
+        </div>
+    </header>
 </template>
 
 <script setup lang="ts">
-
+const { y: verticalWindowScroll } = useWindowScroll()
 const showMenu = ref(false)
+const showHeaderBackground = ref(false)
+const scrollThreshold = ref(50)
+
+const toggleMenu = () => {
+    showMenu.value = !showMenu.value
+}
+
+watch(verticalWindowScroll, async (value) => {
+    showHeaderBackground.value = value > scrollThreshold.value
+})
+
 
 </script>

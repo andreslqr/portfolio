@@ -1,12 +1,8 @@
 <template>
     <main>
-        <header>
-            <AppHeader />
-        </header>
+        <AppHeader />
         <slot />
         <ScrollTop />
-        <footer>
-            <AppFooter />
-        </footer>
+        <AppFooter />
     </main>
 </template>

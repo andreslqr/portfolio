@@ -12,11 +12,14 @@ export default defineNuxtConfig({
     // ['github:red-plug/layers-nutrix', { auth: process.env.GITHUB_TOKEN }]
   ],
   modules: [
-    '@pinia/nuxt',
+    '@nuxtjs/i18n',
+    '@nuxt/content',
     '@nuxtjs/tailwindcss',
     '@primevue/nuxt-module',
     '@nuxtjs/color-mode',
-    '@nuxt/icon'
+    '@nuxt/icon',
+    '@nuxt/fonts',
+    '@vueuse/nuxt',
   ],
   primevue: {
     options: {
@@ -35,6 +38,13 @@ export default defineNuxtConfig({
   },
   colorMode: {
 
+  },
+  i18n: {
+    locales: [
+      { code: 'en', language: 'en-US', },
+      { code: 'es', language: 'es-MX', }
+    ],
+    defaultLocale: 'en',
   },
   runtimeConfig: {
     serverToken: process.env.SERVER_TOKEN,

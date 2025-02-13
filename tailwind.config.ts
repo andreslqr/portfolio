@@ -1,8 +1,10 @@
 import type { Config } from 'tailwindcss'
+import animate from "tailwindcss-animate"
+import { setupInspiraUI } from "@inspira-ui/plugins"
 
 export default <Partial<Config>>{
   darkMode: ['selector', '.dark-mode'],
-  plugins: [require('tailwindcss-primeui')],
+  plugins: [require('tailwindcss-primeui'), animate, setupInspiraUI],
   content: [
     "./components/**/*.{js,vue,ts}",
     "./pages/**/*.{js,vue,ts}",
@@ -13,6 +15,11 @@ export default <Partial<Config>>{
   ],
   theme: {
     extend: {
+      fontFamily: {
+        awesome: ['Rubik Pixels'],
+        sans: ['Jost'], //normal
+        serif: ['Oswald']
+      },
       colors: {
         'red-plug': {
           '50': 'rgb(var(--color-red-plug-50))',
@@ -29,5 +36,5 @@ export default <Partial<Config>>{
         } 
       }
     }
-  }
+  },
 }

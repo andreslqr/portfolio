@@ -2,7 +2,10 @@
 </script>
 
 <template>
-    <div>
-        
+    <div class="h-screen">
+        a
+    </div>
+    <div class="h-screen">
+
     </div>
 </template>

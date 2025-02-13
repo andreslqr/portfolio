@@ -1,8 +1,6 @@
 <template>
-    <Button type="button" severity="secondary" @click="changeTheme">
-        <template #icon>
-            <Icon :name="selectedTheme.icon" />
-        </template>
+    <Button type="button" severity="secondary" @click="changeTheme" size="large" text>
+        <Icon :name="selectedTheme.icon" class="text-2xl"  />
     </Button>
 </template>
 
