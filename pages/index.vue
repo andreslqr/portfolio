@@ -2,10 +2,7 @@
 </script>
 
 <template>
-    <div class="h-screen">
-        a
-    </div>
-    <div class="h-screen">
-
-    </div>
+    <section id="welcome">
+        <SectionHeroWelcome />
+    </section>
 </template>

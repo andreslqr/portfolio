@@ -4,11 +4,13 @@ export default defineI18nConfig(() => ({
   messages: {
     en: {
       home: 'home',
-      blog: 'blog'
+      blog: 'blog',
+      iam: 'Hello I\'m'
     },
     es: {
       home: 'inicio',
-      blog: 'blog'
+      blog: 'blog',
+      iam: 'Hola soy'
     }
   }
 }))

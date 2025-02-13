@@ -10,7 +10,7 @@
             </div>
         </template>
     </Drawer>
-    <header class="py-2 sticky top-0 transition-colors duration-500" :class="{'bg-surface-900': showHeaderBackground}">
+    <header class="py-2 sticky top-0 transition-colors duration-500 z-20" :class="{'bg-surface-100 dark:bg-surface-900': showHeaderBackground}">
         <div class="container mx-auto">
             <nav class="flex justify-between p-2 items-center">
                 <div class="block md:hidden">
