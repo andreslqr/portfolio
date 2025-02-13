@@ -1,6 +1,8 @@
 <template>
     <Button type="button" severity="secondary" @click="changeTheme" size="large" text>
-        <Icon :name="selectedTheme.icon" class="text-2xl"  />
+        <Icon name="heroicons:computer-desktop" class="text-2xl" v-if="selectedTheme.key == 'system'" />
+        <Icon name="heroicons:sun" class="text-2xl" v-if="selectedTheme.key == 'light'" />
+        <Icon name="heroicons:moon" class="text-2xl" v-if="selectedTheme.key == 'dark'" />
     </Button>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
     <ul class="flex flex-col md:flex-row gap-x-4 font-serif items-center">
         <li v-for="menuItem in menuItems" class="w-full md:w-auto">
-            <Button as="router-link" label="Router" :to="menuItem.path" text size="large" class="capitalize w-full md:w-auto">
+            <Button as="router-link" label="Router" :to="localePath(menuItem.path)" text size="large" class="capitalize w-full md:w-auto">
                 {{ $t(menuItem.label) }}
             </Button>
         </li>
@@ -14,15 +14,16 @@
     </ul>
 </template>
 <script setup lang="ts">
+const localePath = useLocalePath()
 
 const menuItems: MenuItem[] = [
     {
         label: 'home',
-        path : '/'
+        path : 'index'
     },
     {
         label: 'blog',
-        path: '/blog'
+        path: 'blog'
     }
 ]
 

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex scale-100 cursor-default overflow-hidden"
+    class="flex scale-100 overflow-hidden"
     @mouseenter="triggerAnimation"
   >
     <div class="flex">

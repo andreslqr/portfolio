@@ -16,7 +16,7 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       fontFamily: {
-        awesome: ['Rubik Pixels'],
+        awesome: ['Rubik Glitch'],
         sans: ['Jost'], //normal
         serif: ['Oswald']
       },

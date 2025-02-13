@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink to="/">
+    <NuxtLink :to="localePath('index')">
         <div class="font-awesome text-3xl sm:text-4xl text-primary group">
             <div class="hidden sm:group-hover:block">
                 <HyperText
@@ -13,3 +13,6 @@
         </div>
     </NuxtLink>
 </template>
+<script setup>
+const localePath = useLocalePath()
+</script>
