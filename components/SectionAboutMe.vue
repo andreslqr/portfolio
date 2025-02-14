@@ -10,7 +10,7 @@
       <p class="text-xl my-2">
         {{ $t('aboutmedescription') }}
       </p>
-      <div class="flex flex-wrap gap-8 my-8">
+      <div class="flex flex-wrap gap-4 md:gap-8 py-4 md:y-8">
         <Tag :value="technology" v-for="technology in technologies"></Tag>
       </div>
     </div>
