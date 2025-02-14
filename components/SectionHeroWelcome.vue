@@ -37,14 +37,14 @@
                     </ul>
                 </div>
                 <ul class="flex justify-center gap-x-4">
-                    <a href="https://www.linkedin.com/in/andresdevr" target="_blank" rel="noreferrer noopener">
+                    <a v-tooltip.top="$t('iamlinkedin')" href="https://www.linkedin.com/in/andresdevr" target="_blank" rel="noreferrer noopener">
                         <Icon name="mingcute:linkedin-line" class="dark:text-surface-400 text-surface-500 hover:text-primary text-2xl" />
                     </a>
-                    <a href="https://github.com/andreslqr" target="_blank" rel="noreferrer noopener">
+                    <a v-tooltip.top="$t('iamgithub')" href="https://github.com/andreslqr" target="_blank" rel="noreferrer noopener">
                         <Icon name="mingcute:github-line" class="dark:text-surface-400 text-surface-500 hover:text-primary text-2xl" />
                     </a>
-                    <a href="https://redplug.com.mx" target="_blank" rel="noreferrer noopener">
-                        <Icon name="mingcute:plugin-line" class="dark:text-surface-400 text-surface-500 hover:text-primary text-2xl" />
+                    <a v-tooltip.top="$t('iamredplug')" href="https://redplug.com.mx" target="_blank" rel="noreferrer noopener">
+                        <Icon name="mingcute:plugin-line" class="dark:text-surface-400 text-surface-500 hover:text-red-plug-500 text-2xl" />
                     </a>
                 </ul>
             </div>
@@ -55,7 +55,6 @@
             </div>
         </div>
     </div>
-    <div class="min-h-screen"></div>
 </template>
 <script setup lang="ts">
 const colorMode = useColorMode()
