@@ -13,3 +13,8 @@ export interface IconCloudProps {
   class?: HTMLAttributes["class"];
   images?: string[];
 }
+
+export interface MenuItem {
+    label: string
+    path: string
+}

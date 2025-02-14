@@ -15,6 +15,7 @@
 </template>
 <script setup lang="ts">
 const localePath = useLocalePath()
+import type { MenuItem } from '~/types';
 
 const menuItems: MenuItem[] = [
     {
@@ -27,9 +28,6 @@ const menuItems: MenuItem[] = [
     }
 ]
 
-interface MenuItem {
-    label: string
-    path: string
-}
+
 
 </script>
