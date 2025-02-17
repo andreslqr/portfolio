@@ -7,7 +7,7 @@
       <h2 class="text-4xl md:text-5xl my-2 font-semibold">
         {{  $t('aboutme') }}
       </h2>
-      <p class="text-xl my-2">
+      <p class="text-lg md:text-xl my-2">
         {{ $t('aboutmedescription') }}
       </p>
       <div class="flex flex-wrap gap-4 md:gap-8 py-4 md:y-8">

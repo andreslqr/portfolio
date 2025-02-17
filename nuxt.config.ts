@@ -40,6 +40,9 @@ export default defineNuxtConfig({
   colorMode: {
 
   },
+  image: {
+    format: ['webp']
+  },
   i18n: {
     vueI18n: './i18n.config.ts',
     locales: [

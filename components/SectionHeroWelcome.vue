@@ -3,7 +3,7 @@
         <ParticlesBackground class="absolute inset-0"
             :quantity="100"
             :ease="100"
-            :color="colorMode.preference == 'dark' ? '#FFF' : '#000'"
+            :color="colorMode.value == 'dark' ? '#FFF' : '#000'"
             :staticity="10"
             refresh>
             
@@ -24,19 +24,19 @@
                     <ul>
                         <li class="my-2 hover:text-primary">
                             <a href="mailto:me@andreslopez.com.mx" target="_blank" rel="noreferrer noopener">
-                                <Icon name="heroicons:envelope" class="text-primary me-2" />
+                                <Icon name="heroicons:envelope" class="text-primary mr-2" />
                                 me@andreslopez.com.mx
                             </a>
                         </li>
                         <li class="my-2 hover:text-primary">
                             <a href="https://maps.app.goo.gl/h2treQiJowLVsPAE9" target="_blank" rel="noreferrer noopener">
-                                <Icon name="heroicons:map-pin" class="text-primary me-2" />
+                                <Icon name="heroicons:map-pin" class="text-primary mr-2" />
                                 Zapopan, Jalisco
                             </a>
                         </li>
                     </ul>
                 </div>
-                <ul class="flex justify-center gap-x-4">
+                <ul class="flex justify-center gap-x-4 my-4">
                     <a v-tooltip.top="$t('iamlinkedin')" href="https://www.linkedin.com/in/andresdevr" target="_blank" rel="noreferrer noopener">
                         <Icon name="mingcute:linkedin-line" class="dark:text-surface-400 text-surface-500 hover:text-primary text-2xl" />
                     </a>
@@ -58,5 +58,4 @@
 </template>
 <script setup lang="ts">
 const colorMode = useColorMode()
-
 </script>
