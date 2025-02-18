@@ -51,6 +51,20 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'en',
   },
+  nitro: {
+    prerender: {
+      routes: [
+        '/_ipx/_/images/content/projects/bensbargains.png',
+        '/_ipx/_/images/content/projects/carlos-alfonso-stylist.png',
+        '/_ipx/_/images/content/projects/cjp-telecom.png',
+        '/_ipx/_/images/content/projects/class-a-drivers.png',
+        '/_ipx/_/images/content/projects/ekar-de-gas.png',
+        '/_ipx/_/images/content/projects/honda-de-mexico.png',
+        '/_ipx/_/images/content/projects/redplug.png',
+        '/_ipx/_/images/content/projects/visor-logistico.png'
+      ]
+    }
+  },
   runtimeConfig: {
     serverToken: process.env.SERVER_TOKEN,
     public: {
