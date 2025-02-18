@@ -8,7 +8,7 @@ export default defineI18nConfig(() => ({
       iam: 'Hello I\'m',
       iamlinkedin: 'Check my professional profile in LinkedIn',
       iamgithub: 'Check my last contributions in GitHub',
-      iamredplug: 'Check the organization where I belongs as freelance developer',
+      iamredplug: 'Check the organization where I belong as freelance developer',
       aboutme: 'About me',
       aboutmedescription: 'Hello, i\'m an apassionate software engineer, motivated by the new technologies and the innovation, with 5+ years working in web development',
       experiencetitle: 'My job credentials',
@@ -16,6 +16,7 @@ export default defineI18nConfig(() => ({
       experiencenetcommerce: 'Netcommerce is a digital marketing agency with 26 years experience, specialized in design and web development, pioneers in the e-Commerce in Mexico and experts in social media.',
       experiencecjp: 'CJP Telecom is a company dedicated to the marketing and distribution of the best technology brands in Mexico, with strategically located distribution points to ensure the best coverage and response time.',
       experiencegob: 'The Honorable Congress of the Free and Sovereign State of Jalisco is the body entrusted with the legislative power in the state of Jalisco, Mexico and, therefore, the body responsible for creating the state laws that govern it.',
+      projectstitle: 'Contributions'
     },
     es: {
       home: 'inicio',
@@ -31,6 +32,7 @@ export default defineI18nConfig(() => ({
       experiencenetcommerce: 'Netcommerce es una agencia de marketing digital con más de 26 años de experiencia, especializados en diseño y desarrollo web, pioneros del comercio electrónico en México y expertos en redes sociales.',
       experiencecjp: 'CJP Telecom es una empresa dedicada a la comercialización y distribución de las mejores marcas de tecnología en México, con puntos de distribución estratégicamente ubicados para tener la mejor cobertura y el mejor tiempo de respuesta.',
       experiencegob: 'El Honorable Congreso del Estado Libre y Soberano de Jalisco es el órgano depositario del poder legislativo en el estado de Jalisco, México y, por lo tanto, el órgano creador de las leyes estatales que lo rigen.',
+      projectstitle: 'Contribuciones'
     }
   }
 }))

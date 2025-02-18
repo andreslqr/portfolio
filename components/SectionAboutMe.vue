@@ -51,7 +51,7 @@ const technologies = [
   "laravel",
   "vue",
   "mysql",
-  "postegresql"
+  "postgresql"
 ]
 
 const logos = slugs.map((slug) => `https://cdn.simpleicons.org/${slug}/${slug}`);
