@@ -4,7 +4,7 @@
         <IconCloud :images="logos" />
     </div>
     <div class="flex flex-col w-full md:w-2/3">
-      <h2 class="text-4xl md:text-5xl my-2 font-semibold">
+      <h2 class="text-4xl md:text-5xl my-2 font-serif font-semibold">
         {{  $t('aboutme') }}
       </h2>
       <p class="text-lg md:text-xl my-2">
@@ -41,7 +41,7 @@ const slugs = [
   "nuxt",
   "tailwindcss",
   "bootstrap"
-];
+]
 
 const technologies = [
   "php",

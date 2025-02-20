@@ -14,13 +14,14 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
     '@nuxt/content',
-    '@nuxtjs/i18n',
     '@nuxt/icon',
     '@nuxt/fonts',
+    '@nuxtjs/i18n',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@primevue/nuxt-module',
     '@vueuse/nuxt',
+    'nuxt-lodash'
   ],
   primevue: {
     options: {

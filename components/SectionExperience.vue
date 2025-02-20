@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-[89vh] container px-2 lg:px-0 mx-auto my-16">
-    <h2 class="text-4xl md:text-5xl font-semibold text-center my-4 md:my-8 capitalize">
+    <h2 class="text-4xl md:text-5xl font-semibold font-serif text-center my-4 md:my-8 capitalize">
       {{ $t('experiencetitle') }}
     </h2>
     <div class="flex justify-center">

@@ -11,4 +11,24 @@
   <section id="projects">
     <SectionProjects />
   </section>
+  <section id="blog">
+    <SectionBlog />
+  </section>
+  <section id="contact">
+    <SectionContact />
+  </section>
 </template>
+
+<script setup lang="ts">
+const { t } = useI18n()
+
+const title = computed(() => `${t('indextitle')} | ${t('portfolio')}`)
+const description = t('indexdescription')
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description
+})
+</script>

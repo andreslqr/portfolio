@@ -3,6 +3,9 @@ export default defineI18nConfig(() => ({
   locale: 'en',
   messages: {
     en: {
+      indextitle: 'AL',
+      indexdescription: 'This is my personal portfolio to share my knowledge and curiosity for the technology an innovation',
+      portfolio: 'Portfolio',
       home: 'home',
       blog: 'blog',
       iam: 'Hello I\'m',
@@ -16,9 +19,22 @@ export default defineI18nConfig(() => ({
       experiencenetcommerce: 'Netcommerce is a digital marketing agency with 26 years experience, specialized in design and web development, pioneers in the e-Commerce in Mexico and experts in social media.',
       experiencecjp: 'CJP Telecom is a company dedicated to the marketing and distribution of the best technology brands in Mexico, with strategically located distribution points to ensure the best coverage and response time.',
       experiencegob: 'The Honorable Congress of the Free and Sovereign State of Jalisco is the body entrusted with the legislative power in the state of Jalisco, Mexico and, therefore, the body responsible for creating the state laws that govern it.',
-      projectstitle: 'Contributions'
+      projectstitle: 'Contributions',
+      projectsdescription: 'The public projects where i contributed',
+      blogtitle: 'My posts',
+      blogdescription: 'I like to share the knowledge and my curiosity',
+      readmore: 'Read more',
+      contacttitle: 'Are you ready to know me?',
+      contactdescription: 'Just make a click on this awesome button',
+      contactcta: 'Send',
+      emailsubject: 'AL - Contact via portfolio',
+      emailbody: 'Hello, i\'m interested on your professional profile because ...',
+      contactmessagefield: 'Your message'
     },
     es: {
+      indextitle: 'AL',
+      indexdescription: 'Este es mi portafolio personal para compartir mi conocimiento y curiosidad por la tecnología y la innovación',
+      portfolio: 'Portafolio',
       home: 'inicio',
       blog: 'blog',
       iam: 'Hola soy',
@@ -32,7 +48,17 @@ export default defineI18nConfig(() => ({
       experiencenetcommerce: 'Netcommerce es una agencia de marketing digital con más de 26 años de experiencia, especializados en diseño y desarrollo web, pioneros del comercio electrónico en México y expertos en redes sociales.',
       experiencecjp: 'CJP Telecom es una empresa dedicada a la comercialización y distribución de las mejores marcas de tecnología en México, con puntos de distribución estratégicamente ubicados para tener la mejor cobertura y el mejor tiempo de respuesta.',
       experiencegob: 'El Honorable Congreso del Estado Libre y Soberano de Jalisco es el órgano depositario del poder legislativo en el estado de Jalisco, México y, por lo tanto, el órgano creador de las leyes estatales que lo rigen.',
-      projectstitle: 'Contribuciones'
+      projectstitle: 'Contribuciones',
+      projectsdescription: 'Los proyectos públicos donde he contribuido',
+      blogtitle: 'Mis publicaciones',
+      blogdescription: 'Me gusta compartir el conocimiento y mi curiosidad',
+      readmore: 'Leer más',
+      contacttitle: '¿Quieres conocerme?',
+      contactdescription: 'Solo haz click en este bonito botón',
+      contactcta: 'Enviar',
+      emailsubject: 'AL - Contacto via portafolio',
+      emailbody: 'Hola, tengo interés en tu perfil profesional porque...',
+      contactmessagefield: 'Tú mensaje'
     }
   }
 }))

@@ -17,7 +17,7 @@ export default <Partial<Config>>{
     extend: {
       fontFamily: {
         awesome: ['Rubik Glitch'],
-        sans: ['Jost'], //normal
+        sans: ['Montserrat'], //normal
         serif: ['Oswald']
       },
       colors: {
