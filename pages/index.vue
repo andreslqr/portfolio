@@ -29,6 +29,7 @@ useSeoMeta({
   title,
   description,
   ogTitle: title,
-  ogDescription: description
+  ogDescription: description,
+  ogImage: '/front.png'
 })
 </script>
