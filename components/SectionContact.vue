@@ -1,7 +1,7 @@
 <template>
   <div class="h-[89vh] flex flex-col md:flex-row items-center container px-2 lg:px-0 mx-auto mt-8 mb-4">
-    <div class="flex flex-col items-center w-full md:w-1/2">
-      <h2 class="text-3xl md:text-4xl font-serif text-center my-4 capitalize">
+    <div class="flex flex-col w-full md:w-1/2">
+      <h2 class="text-4xl md:text-5xl font-semibold font-serif text-center md:text-start my-4 capitalize">
         {{ $t('contacttitle') }}
       </h2>
       <FloatLabel class="w-full mt-8">

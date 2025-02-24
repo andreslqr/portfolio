@@ -10,7 +10,7 @@
       <BlogCard v-for="post in posts" meteors :key="`blog-${post.id}`" :path="post.path" :title="post.title" :image="post.image" :description="post.description" />
     </BlogGrid>
     <div class="flex justify-center my-8">
-      <Button size="large" as="router-link" label="Router" :to="localePath('blog')">
+      <Button size="large" as="router-link" label="Router" :to="localePath({name: 'blog-page', params: {page: '1'}})">
         {{ $t('readmore') }}
       </Button>
     </div>
@@ -22,7 +22,7 @@ const localePath = useLocalePath()
 
 const postsLimit = ref(4)
 
-const { data: posts } = useAsyncData(`blog-posts:${postsLimit.value}:${locale.value}`, () => queryCollection(`${locale.value}Posts`)
+const { data: posts } = useAsyncData(`blog-posts:limit-${postsLimit.value}:locale-${locale.value}`, () => queryCollection(`${locale.value}Posts`)
                                               .select('id', 'title', 'path', 'image', 'description')
                                               .limit(postsLimit.value)
                                               .all(), {

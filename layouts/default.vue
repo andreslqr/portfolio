@@ -1,5 +1,7 @@
 <template>
+    <NuxtLoadingIndicator :color="false" class="!bg-gradient-to-r !from-primary-500 !to-primary-200 !dark:from-primary-500 !dark:to-primary-950" />
     <main>
+  
         <AppHeader />
         <slot />
         <ScrollTop />

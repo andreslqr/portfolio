@@ -30,5 +30,5 @@ const props = defineProps({
   description: String
 })
 
-const link = computed(() => localePath('blog') + props.path)
+const link = computed(() => localePath({name: 'blog-posts-slug', params: {slug: props.path?.replace('/', '')}}))
 </script>

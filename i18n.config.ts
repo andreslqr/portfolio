@@ -4,10 +4,10 @@ export default defineI18nConfig(() => ({
   messages: {
     en: {
       indextitle: 'AL',
-      indexdescription: 'This is my personal portfolio to share my knowledge and curiosity for the technology an innovation',
+      indexdescription: 'This is my personal portfolio to share my knowledge and curiosity for the technology and innovation',
       portfolio: 'Portfolio',
-      home: 'home',
-      blog: 'blog',
+      home: 'Home',
+      blog: 'Blog',
       iam: 'Hello I\'m',
       iamlinkedin: 'Check my professional profile in LinkedIn',
       iamgithub: 'Check my last contributions in GitHub',
@@ -29,14 +29,17 @@ export default defineI18nConfig(() => ({
       contactcta: 'Send',
       emailsubject: 'AL - Contact via portfolio',
       emailbody: 'Hello, i\'m interested on your professional profile because ...',
-      contactmessagefield: 'Your message'
+      contactmessagefield: 'Your message',
+      pagenotfound: 'Page not found',
+      ctaerror: 'Go back to a safe place',
+      publishedby: 'Published by'
     },
     es: {
       indextitle: 'AL',
       indexdescription: 'Este es mi portafolio personal para compartir mi conocimiento y curiosidad por la tecnología y la innovación',
       portfolio: 'Portafolio',
-      home: 'inicio',
-      blog: 'blog',
+      home: 'Inicio',
+      blog: 'Blog',
       iam: 'Hola soy',
       iamlinkedin: 'Enterate de mi perfil profesional en LinkedIn',
       iamgithub: 'Enterate de mis últimas contribuciones en GitHub',
@@ -58,7 +61,10 @@ export default defineI18nConfig(() => ({
       contactcta: 'Enviar',
       emailsubject: 'AL - Contacto via portafolio',
       emailbody: 'Hola, tengo interés en tu perfil profesional porque...',
-      contactmessagefield: 'Tú mensaje'
+      contactmessagefield: 'Tú mensaje',
+      pagenotfound: 'Página no encontrada',
+      ctaerror: 'Volver a un lugar seguro',
+      publishedby: 'Publicado por'
     }
   }
 }))

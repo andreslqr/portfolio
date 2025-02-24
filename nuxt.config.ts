@@ -23,6 +23,9 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-lodash'
   ],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
   primevue: {
     options: {
       theme: {
@@ -51,6 +54,29 @@ export default defineNuxtConfig({
       { code: 'es', language: 'es-MX', }
     ],
     defaultLocale: 'en',
+  },
+  content: {
+    build: {
+      markdown: {
+        highlight: { 
+          theme: {
+            default: 'slack-ochin',
+            dark: 'one-dark-pro',
+          },
+          langs: [
+              'js',
+              'json',
+              'html',
+              'php',
+              'sql',
+              'vue-html',
+              'vue',
+              'bash',
+              'blade'
+          ]
+        }
+      }
+    }
   },
   nitro: {
     prerender: {
