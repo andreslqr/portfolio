@@ -32,7 +32,11 @@ export default defineI18nConfig(() => ({
       contactmessagefield: 'Your message',
       pagenotfound: 'Page not found',
       ctaerror: 'Go back to a safe place',
-      publishedby: 'Published by'
+      publishedby: 'Published by',
+      medescription: 'Laravel lover, Vue enthusiastic & writer of everything sounds interesting',
+      blogback: 'Back to list...',
+      footerrights: 'All rights reserved',
+      footerpowered: 'Powered by'
     },
     es: {
       indextitle: 'AL',
@@ -64,7 +68,11 @@ export default defineI18nConfig(() => ({
       contactmessagefield: 'Tú mensaje',
       pagenotfound: 'Página no encontrada',
       ctaerror: 'Volver a un lugar seguro',
-      publishedby: 'Publicado por'
+      publishedby: 'Publicado por',
+      medescription: 'Gran fan de Laravel, entusiasta de Vue y escritor de cualquier cosa que suene interesante',
+      blogback: 'Volver al listado...',
+      footerrights: 'Todos los derechos reservados',
+      footerpowered: 'Impulsado por'
     }
   }
 }))

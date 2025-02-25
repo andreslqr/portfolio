@@ -1,24 +1,45 @@
 <template>
   <div class="max-w-4xl mx-auto px-2 lg:px-0">
-    <h1 class="text-center text-4xl md:text-5xl font-extrabold font-serif mt-4 mb-8">
-      {{ post?.title }}
-    </h1>
+    <div class="leading-loose">
+      <h1 class="text-center text-4xl md:text-5xl font-extrabold font-serif mt-4 mb-8">
+        {{ post?.title }}
+      </h1>
+    </div>
     <p class="text-xs my-4 text-surface-600 dark:text-surface-200">
       {{ $t('publishedby') }} Andrés López
     </p>
-    <NuxtImg :src="post?.image" :alt="post?.title" class="rounded mx-auto my-4 w-full shadow-lg" />
+    <NuxtImg :src="post?.image" :alt="post?.title" class="rounded mx-auto my-4 w-full shadow-lg dark:shadow-surface-700" />
     <section id="blog-content">
       <ContentRenderer v-if="post" :value="post" />
+    </section>
+    <section class="my-4">
+      <div class="flex p-4 dark:bg-surface-950 bg-surface-200 rounded gap-x-4 items-center">
+        <NuxtImg src="/images/me.png" alt="Andrés López" class="rounded-lg w-20 h-20" />
+        <div>
+          <h2 class="font-serif text-2xl font-bold mb-1">
+            Andrés López
+          </h2>
+          <p class="max-w-sm text-xs md:text-base text-surface-800 dark:text-surface-300">
+            {{ $t('medescription') }}
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-center my-4">
+        <NuxtLink :to="localePath({name: 'blog-page', params: {page: '1'}})" class="text-primary hover:text-primary-500 underline">
+          {{ $t('blogback') }}
+        </NuxtLink>
+      </div>
     </section>
   </div>
 </template>
 <script setup lang="ts">
 const route = useRoute()
 const { t, locale } = useI18n()
+const localePath = useLocalePath()
 
-const slug = typeof route.params.slug == 'string' ? route.params.slug : ''
+const slug = typeof route.params.slug == 'string' ? `/${route.params.slug}` : ''
 
-const { data: post } = await useAsyncData(slug,  () => queryCollection(`${locale.value}Posts`).path(`/${slug}`).first(), {
+const { data: post } = await useAsyncData(slug,  () => queryCollection(`${locale.value}Posts`).path(slug).first(), {
                                                 watch: [locale]
                                     })
 

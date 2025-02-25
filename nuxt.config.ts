@@ -31,7 +31,7 @@ export default defineNuxtConfig({
       theme: {
         preset: Theme,
         options: {
-          darkModeSelector: '.dark-mode',
+          darkModeSelector: '.dark',
           cssLayer: {
             name: 'primevue',
             order: 'tailwind-base, primevue, tailwind-utilities'
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     },
   },
   colorMode: {
-
+    classSuffix: ''
   },
   image: {
     format: ['webp']
