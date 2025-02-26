@@ -22,9 +22,10 @@ const localePath = useLocalePath()
 
 const postsLimit = ref(4)
 
-const { data: posts } = useAsyncData(`blog-posts:limit-${postsLimit.value}:locale-${locale.value}`, () => queryCollection(`${locale.value}Posts`)
+const { data: posts } = await useAsyncData(`blog-posts:limit-${postsLimit.value}:locale-${locale.value}`, () => queryCollection(`${locale.value}Posts`)
                                               .select('id', 'title', 'path', 'image', 'description')
                                               .limit(postsLimit.value)
+                                              .order('id', 'DESC')
                                               .all(), {
                                                 watch: [locale]
                                               })
