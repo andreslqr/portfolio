@@ -8,13 +8,13 @@
     <p class="text-xs my-4 text-surface-600 dark:text-surface-200">
       {{ $t('publishedby') }} Andrés López
     </p>
-    <NuxtImg :src="post?.image" :alt="post?.title" class="rounded mx-auto my-4 w-full shadow-lg dark:shadow-surface-700" />
+    <NuxtPicture :src="post?.image" :img-attrs="{alt: post?.title, class: 'rounded mx-auto my-4 w-full shadow-lg dark:shadow-surface-700'}" />
     <section id="blog-content">
       <ContentRenderer v-if="post" :value="post" />
     </section>
     <section class="my-4">
       <div class="flex p-4 dark:bg-surface-950 bg-surface-200 rounded gap-x-4 items-center">
-        <NuxtImg src="/images/me.png" alt="Andrés López" class="rounded-lg w-20 h-20" />
+        <NuxtPicture src="/images/me.png" :img-attrs="{alt: 'Andrés López', class: 'rounded-lg w-20 h-20'}" />
         <div>
           <h2 class="font-serif text-2xl font-bold mb-1">
             Andrés López

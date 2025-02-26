@@ -57,10 +57,10 @@
       <div class="rounded-full">
         <Image src="/images/me.png" class="rounded-full" preview :pt:preview-mask:class="'rounded-full'">
           <template #image>
-            <NuxtImg src="/images/me.png" alt="Andrés López" width="200" height="200" class="rounded-full w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80" />
+            <NuxtPicture src="/images/me.png" :img-attrs="{alt: 'Andrés López', width: 200, height: 200, class: 'rounded-full w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80'}" />
           </template>
           <template #preview="slotProps">
-            <NuxtImg src="/images/me.png" alt="Andrés López" :style="slotProps.style" width="800" height="800"  />
+            <NuxtPicture src="/images/me.png" :img-attrs="{alt: 'Andrés López', style: slotProps.style, width: 800, height: 800}" />
           </template>
         </Image>
       </div>
