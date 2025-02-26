@@ -2,7 +2,17 @@ import Aura from "@primevue/themes/aura"
 
 import { definePreset } from '@primevue/themes'
 
-export default definePreset(Aura, {
+const usedComponents = [
+    'button',
+    'floatlabel',
+    'drawer',
+    'textarea',
+    'tag',
+    'timeline',
+    'image',
+]
+
+const theme = definePreset(Aura, {
     semantic: {
         primary: {
             50: 'rgb(var(--color-purple-heart-50))',
@@ -19,3 +29,17 @@ export default definePreset(Aura, {
         }
     }
 })
+
+console.log(Object.keys(theme.components))
+// filter the components for the only used
+theme.components = Object.fromEntries(
+    Object.entries(theme.components).filter(([key]) => usedComponents.includes(key))
+);
+
+theme.primitive = {
+    borderRadius: theme.primitive.borderRadius,
+    slate: theme.primitive.slate,
+    zinc: theme.primitive.zinc
+}
+
+export default theme

@@ -24,7 +24,16 @@ export default defineNuxtConfig({
     'nuxt-lodash'
   ],
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
+    head: {
+      script: [
+        {
+          src: 'https://analytics.ahrefs.com/analytics.js',
+          'data-key': 'IsYkb8Q0EGCEgn3+MZJ4jA',
+          async: true
+        }
+      ]
+    }
   },
   primevue: {
     options: {

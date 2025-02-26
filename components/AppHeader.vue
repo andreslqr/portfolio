@@ -14,7 +14,7 @@
         <div class="container mx-auto">
             <nav class="flex justify-between p-2 items-center">
                 <div class="block md:hidden">
-                    <Button text size="large" @click="toggleMenu" severity="secondary">
+                    <Button text size="large" @click="toggleMenu" severity="secondary" :aria-label="$t('openmenu')">
                         <Icon name="heroicons:bars-3" class="text-2xl"/>
                     </Button>
                 </div>

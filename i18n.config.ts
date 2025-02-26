@@ -36,7 +36,9 @@ export default defineI18nConfig(() => ({
       medescription: 'Laravel lover, Vue enthusiastic & writer of everything sounds interesting',
       blogback: 'Back to list...',
       footerrights: 'All rights reserved',
-      footerpowered: 'Powered by'
+      footerpowered: 'Powered by',
+      openmenu: 'Open menu',
+      toggledarkmode: 'Toggle dark mode'
     },
     es: {
       indextitle: 'AL',
@@ -72,7 +74,9 @@ export default defineI18nConfig(() => ({
       medescription: 'Gran fan de Laravel, entusiasta de Vue y escritor de cualquier cosa que suene interesante',
       blogback: 'Volver al listado...',
       footerrights: 'Todos los derechos reservados',
-      footerpowered: 'Impulsado por'
+      footerpowered: 'Impulsado por',
+      openmenu: 'Abrir menú',
+      toggledarkmode: 'Alternar modo oscuro'
     }
   }
 }))

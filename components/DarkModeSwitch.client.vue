@@ -1,5 +1,5 @@
 <template>
-    <Button type="button" severity="secondary" @click="changeTheme" size="large" text>
+    <Button type="button" severity="secondary" @click="changeTheme" size="large" text  :aria-label="$t('toggledarkmode')">
         <Icon name="heroicons:computer-desktop" class="text-2xl" v-if="selectedTheme.key == 'system'" />
         <Icon name="heroicons:sun" class="text-2xl" v-if="selectedTheme.key == 'light'" />
         <Icon name="heroicons:moon" class="text-2xl" v-if="selectedTheme.key == 'dark'" />

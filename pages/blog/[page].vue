@@ -47,7 +47,7 @@ const { data: posts } = useAsyncData(`blog-posts:lang-${locale.value}:page-${pag
                                               .select('id', 'title', 'path', 'image', 'description')
                                               .limit(postsLimit.value)
                                               .skip(skip.value)
-                                              .order('path', 'DESC')
+                                              .order('id', 'DESC')
                                               .all(), {
                                                 watch: [locale]
                                               })

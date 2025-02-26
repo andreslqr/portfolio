@@ -19,7 +19,8 @@ const postCollection: Collection = {
     image: z.string(),
     description: z.string(),
     tags: z.array(z.string()),
-    date: z.date()
+    date: z.date(),
+    order: z.number()
   }),
 }
 

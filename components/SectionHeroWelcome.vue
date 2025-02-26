@@ -33,20 +33,23 @@
           </ul>
         </div>
         <ul class="flex justify-center gap-x-4 my-4">
-          <a v-tooltip.top="$t('iamlinkedin')" href="https://www.linkedin.com/in/andresdevr" target="_blank"
-            rel="noreferrer noopener">
-            <Icon name="mingcute:linkedin-line"
-              class="dark:text-surface-400 text-surface-500 hover:text-primary text-2xl" />
-          </a>
-          <a v-tooltip.top="$t('iamgithub')" href="https://github.com/andreslqr" target="_blank"
-            rel="noreferrer noopener">
-            <Icon name="mingcute:github-line"
-              class="dark:text-surface-400 text-surface-500 hover:text-primary text-2xl" />
-          </a>
-          <a v-tooltip.top="$t('iamredplug')" href="https://redplug.com.mx" target="_blank" rel="noreferrer noopener">
-            <Icon name="mingcute:plugin-line"
-              class="dark:text-surface-400 text-surface-500 hover:text-red-plug-500 text-2xl" />
-          </a>
+          <li>
+            <a v-tooltip.top="$t('iamlinkedin')" href="https://www.linkedin.com/in/andresdevr" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn">
+              <Icon name="mingcute:linkedin-line" class="dark:text-surface-400 text-surface-500 hover:text-primary text-2xl" />
+            </a>
+          </li>
+          <li>
+            <a v-tooltip.top="$t('iamgithub')" href="https://github.com/andreslqr" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
+              <Icon name="mingcute:github-line"
+                class="dark:text-surface-400 text-surface-500 hover:text-primary text-2xl" />
+            </a>
+          </li>
+          <li>
+            <a v-tooltip.top="$t('iamredplug')" href="https://redplug.com.mx" target="_blank" rel="noreferrer noopener" aria-label="Red Plug">
+              <Icon name="mingcute:plugin-line"
+                class="dark:text-surface-400 text-surface-500 hover:text-red-plug-500 text-2xl" />
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -54,7 +57,10 @@
       <div class="rounded-full">
         <Image src="/images/me.png" class="rounded-full" preview :pt:preview-mask:class="'rounded-full'">
           <template #image>
-            <NuxtImg src="/images/me.png" alt="Andrés López" class="rounded-full w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80" />
+            <NuxtImg src="/images/me.png" alt="Andrés López" width="200" height="200" class="rounded-full w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80" />
+          </template>
+          <template #preview="slotProps">
+            <NuxtImg src="/images/me.png" alt="Andrés López" :style="slotProps.style" width="800" height="800"  />
           </template>
         </Image>
       </div>

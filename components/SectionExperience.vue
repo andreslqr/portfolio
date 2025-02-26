@@ -7,7 +7,7 @@
       <Timeline :value="jobs" class="w-full md:w-80" :pt:event:class="'md:even:flex-row-reverse'" :pt:event-opposite:class="'flex-none md:flex-1'">
           <template #content="slotProps">
             <div class="rounded-lg mt-4 mb-8 py-4 px-4 transition duration-700 dark:hover:bg-primary-950 hover:bg-primary-300 hover:scale-105 border border-primary-200" :class="{'md:hover:-translate-x-4 hover:translate-x-2 md:text-right': isOnLeft(slotProps.index), 'translate-x-2 md:hover:translate-x-4': ! isOnLeft(slotProps.index)}">
-              <NuxtImg :src="slotProps.item.logo" :alt="`image of ${slotProps.item.name}`" class="h-20 bg-surface-300 dark:bg-transparent rounded p-2" :class="{'md:ml-auto': isOnLeft(slotProps.index)}" />
+              <NuxtImg :src="slotProps.item.logo" :alt="`image of ${slotProps.item.name}`" class="h-20 bg-surface-300 dark:bg-transparent rounded p-2" :class="{'md:ml-auto': isOnLeft(slotProps.index)}" height="150" />
               <h3 class="font-serif text-3xl" v-text="slotProps.item.name">
               </h3>
               <Chip v-text="slotProps.item.year" class="my-2">
