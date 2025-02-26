@@ -90,7 +90,10 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: [
+        '/_ipx/s_200x200/images/me.png',
+        '/_ipx/s_400x400/images/me.png',
         '/_ipx/s_800x800/images/me.png',
+        '/_ipx/s_1600x1600/images/me.png',
         '/_ipx/s_250x140/images/content/projects/bensbargains.png',
         '/_ipx/s_250x140/images/content/projects/carlos-alfonso-stylist.png',
         '/_ipx/s_250x140/images/content/projects/cjp-telecom.png',
@@ -98,7 +101,15 @@ export default defineNuxtConfig({
         '/_ipx/s_250x140/images/content/projects/ekar-de-gas.png',
         '/_ipx/s_250x140/images/content/projects/honda-de-mexico.png',
         '/_ipx/s_250x140/images/content/projects/redplug.png',
-        '/_ipx/s_250x140/images/content/projects/visor-logistico.png'
+        '/_ipx/s_250x140/images/content/projects/visor-logistico.png',
+        '/_ipx/s_500x280/images/content/projects/bensbargains.png',
+        '/_ipx/s_500x280/images/content/projects/carlos-alfonso-stylist.png',
+        '/_ipx/s_500x280/images/content/projects/cjp-telecom.png',
+        '/_ipx/s_500x280/images/content/projects/class-a-drivers.png',
+        '/_ipx/s_500x280/images/content/projects/ekar-de-gas.png',
+        '/_ipx/s_500x280/images/content/projects/honda-de-mexico.png',
+        '/_ipx/s_500x280/images/content/projects/redplug.png',
+        '/_ipx/s_500x280/images/content/projects/visor-logistico.png'
       ]
     }
   },
