@@ -1,7 +1,9 @@
 <template>
   <div class="min-h-[89vh] flex flex-col md:flex-row items-center container px-2 lg:px-0 mx-auto gap-x-4">
     <div class="flex flex-col items-center w-full md:w-1/2">
-        <IconCloud :images="logos" />
+        <ClientOnly>
+          <IconCloud :images="logos" />
+        </ClientOnly>
     </div>
     <div class="flex flex-col w-full md:w-2/3">
       <h2 class="text-4xl md:text-5xl my-2 font-serif font-semibold">

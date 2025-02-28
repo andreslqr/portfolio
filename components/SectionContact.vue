@@ -15,7 +15,9 @@
       </div>
     </div>
     <div class="w-full md:w-1/2 flex justify-center">
-      <IconCloud :images="logos" />
+      <ClientOnly>
+        <IconCloud :images="logos" />
+      </ClientOnly>
     </div>
   </div>
 </template>

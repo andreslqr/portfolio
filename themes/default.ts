@@ -30,7 +30,6 @@ const theme = definePreset(Aura, {
     }
 })
 
-console.log(Object.keys(theme.components))
 // filter the components for the only used
 theme.components = Object.fromEntries(
     Object.entries(theme.components).filter(([key]) => usedComponents.includes(key))

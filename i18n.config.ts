@@ -13,7 +13,7 @@ export default defineI18nConfig(() => ({
       iamgithub: 'Check my last contributions in GitHub',
       iamredplug: 'Check the organization where I belong as freelance developer',
       aboutme: 'About me',
-      aboutmedescription: 'Hello, i\'m an apassionate software engineer, motivated by the new technologies and the innovation, with 5+ years working in web development',
+      aboutmedescription: 'Hello, i\'m a passionate software engineer, motivated by the new technologies and the innovation, with 5+ years working in web development',
       experiencetitle: 'My job credentials',
       experienceinternetbrands: 'MH Sub I, LLC d/b/a Internet Brands is a digital media, marketing services, and software company based in El Segundo, California, United States, that operates online media, community, e-commerce, and SaaS businesses in vertical markets.',
       experiencenetcommerce: 'Netcommerce is a digital marketing agency with 26 years experience, specialized in design and web development, pioneers in the e-Commerce in Mexico and experts in social media.',

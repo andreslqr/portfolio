@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@primevue/nuxt-module',
     '@vueuse/nuxt',
-    'nuxt-lodash'
+    'nuxt-lodash',
   ],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
