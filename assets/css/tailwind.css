@@ -85,11 +85,11 @@
 }
 
 #blog-content img {
-    @apply max-w-full rounded-md shadow my-4;
+    @apply max-w-full md:w-3/4 mx-auto rounded-sm border border-primary shadow my-4;
 }
 
 #blog-content table {
-    @apply w-full border-collapse border border-gray-300 dark:border-gray-600 my-6;
+    @apply w-full border-collapse border border-gray-300 dark:border-gray-600 my-4;
 }
 
 #blog-content table th,
