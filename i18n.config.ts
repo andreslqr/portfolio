@@ -38,7 +38,8 @@ export default defineI18nConfig(() => ({
       footerrights: 'All rights reserved',
       footerpowered: 'Powered by',
       openmenu: 'Open menu',
-      toggledarkmode: 'Toggle dark mode'
+      toggledarkmode: 'Toggle dark mode',
+      changelang: 'Change language'
     },
     es: {
       indextitle: 'AL',
@@ -76,7 +77,8 @@ export default defineI18nConfig(() => ({
       footerrights: 'Todos los derechos reservados',
       footerpowered: 'Impulsado por',
       openmenu: 'Abrir menú',
-      toggledarkmode: 'Alternar modo oscuro'
+      toggledarkmode: 'Alternar modo oscuro',
+      changelang: 'Cambiar idioma'
     }
   }
 }))

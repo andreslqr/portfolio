@@ -7,7 +7,7 @@
     <div class="flex flex-col items-center w-full md:w-1/2 z-10">
       <div>
 
-        <Button raised rounded class="my-4 px-8">
+        <Button raised rounded class="my-4 px-8 font-semibold bg-primary-800 border-prmary-600 dark:bg-primary-300 dark:border-primary-200">
           {{ $t("iam") }}
         </Button>
         <h1 class="text-5xl md:text-6xl font-serif font-semibold my-2">
@@ -57,10 +57,10 @@
       <div class="rounded-full">
         <Image src="/images/me.png" class="rounded-full" preview :pt:preview-mask:class="'rounded-full'">
           <template #image>
-            <NuxtPicture src="/images/me.png" :img-attrs="{alt: 'Andrés López', width: 200, height: 200, class: 'rounded-full w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80'}" />
+            <NuxtPicture src="/images/me-xs.png" :img-attrs="{alt: 'Andrés López', width: 200, height: 200, class: 'rounded-full w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80'}" />
           </template>
           <template #preview="slotProps">
-            <NuxtPicture src="/images/me.png" :img-attrs="{alt: 'Andrés López', style: slotProps.style, width: 800, height: 800}" />
+            <NuxtPicture src="/images/me-xl.png" :img-attrs="{alt: 'Andrés López', style: slotProps.style, width: 800, height: 800, loading: 'lazy'}" />
           </template>
         </Image>
       </div>

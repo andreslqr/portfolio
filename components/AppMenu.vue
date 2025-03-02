@@ -6,7 +6,7 @@
             </Button>
         </li>
         <li class="w-full md:w-auto">
-            <Button as="router-link" label="Router" :to="localePath({name: 'blog-page', params: {page: '1'}})" text size="large" class="capitalize w-full md:w-auto">
+            <Button as="router-link" label="Router" :to="localePath({name: 'blog-page', params: {page: '1'}})" text size="large" class="capitalize w-full md:w-auto" :aria-label="$t('blog')">
                 {{ $t('blog') }}
             </Button>
         </li>

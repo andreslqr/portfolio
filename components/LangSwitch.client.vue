@@ -1,5 +1,5 @@
 <template>
-  <Button type="button" severity="secondary" size="large" text @click="changeLang">
+  <Button type="button" severity="secondary" size="large" text @click="changeLang" :aria-label="$t('changelang')">
     <Icon name="circle-flags:us-um" v-if="locale == 'en'" class="text-xl" />
     <Icon name="circle-flags:mx" v-if="locale == 'es'" class="text-xl" />
   </Button>

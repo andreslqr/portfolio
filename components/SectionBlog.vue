@@ -10,7 +10,7 @@
       <BlogCard v-for="post in posts" meteors :key="`blog-${post.id}`" :path="post.path" :title="post.title" :image="post.image" :description="post.description" />
     </BlogGrid>
     <div class="flex justify-center my-8">
-      <Button size="large" as="router-link" label="Router" :to="localePath({name: 'blog-page', params: {page: '1'}})">
+      <Button size="large" as="router-link" label="Router" :to="localePath({name: 'blog-page', params: {page: '1'}})" :aria-label="$t('blog')">
         {{ $t('readmore') }}
       </Button>
     </div>
