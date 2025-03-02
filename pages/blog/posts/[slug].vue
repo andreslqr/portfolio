@@ -14,7 +14,7 @@
     </section>
     <section class="my-4">
       <div class="flex p-2 md:p-4 dark:bg-surface-950 bg-surface-200 rounded gap-x-2 md:gap-x-4 items-center">
-        <NuxtPicture src="/images/me.png" :img-attrs="{alt: 'Andrés López', class: 'w-16 rounded-lg md:w-20'}" />
+        <NuxtPicture src="/images/me-xs.png" :img-attrs="{alt: 'Andrés López', class: 'w-16 rounded-lg md:w-20'}" />
         <div class="w-auto md:max-w-sm">
           <h2 class="font-serif text-lg md:text-2xl font-bold mb-1">
             Andrés López
