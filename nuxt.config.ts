@@ -90,6 +90,14 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: [
+        '/_ipx/w_3072&f_webp/images/me-xl.png',
+        '/_ipx/w_2560&f_webp/images/me-xl.png',
+        '/_ipx/w_2048&f_webp/images/me-xl.png',
+        '/_ipx/w_1536&f_webp/images/me-xl.png',
+        '/_ipx/w_1024&f_webp/images/me-xl.png',
+        '/_ipx/w_768&f_webp/images/me-xl.png',
+        '/_ipx/w_640&f_webp/images/me-xl.png',
+        '/_ipx/w_320&f_webp/images/me-xl.png',
         '/_ipx/s_250x140/images/content/projects/bensbargains.png',
         '/_ipx/s_250x140/images/content/projects/carlos-alfonso-stylist.png',
         '/_ipx/s_250x140/images/content/projects/cjp-telecom.png',
