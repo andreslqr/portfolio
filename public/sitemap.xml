@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.andreslopez.com.mx/</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.andreslopez.com.mx/" />
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://www.andreslopez.com.mx/es" />
+  </url>
+  <url>
+    <loc>https://www.andreslopez.com.mx/es</loc>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://www.andreslopez.com.mx/es" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.andreslopez.com.mx/" />
+  </url>
+  <url>
+    <loc>https://www.andreslopez.com.mx/blog/1</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.andreslopez.com.mx/blog/1" />
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://www.andreslopez.com.mx/es/blog/1" />
+  </url>
+  <url>
+    <loc>https://www.andreslopez.com.mx/es/blog/1</loc>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://www.andreslopez.com.mx/es/blog/1" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.andreslopez.com.mx/blog/1" />
+  </url>
+  <url>
+    <loc>https://www.andreslopez.com.mx/blog/posts/seo-andreslopez</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.andreslopez.com.mx/blog/posts/seo-andreslopez" />
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://www.andreslopez.com.mx/es/blog/posts/seo-andreslopez" />
+  </url>
+  <url>
+    <loc>https://www.andreslopez.com.mx/es/blog/posts/seo-andreslopez</loc>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://www.andreslopez.com.mx/es/blog/posts/seo-andreslopez" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.andreslopez.com.mx/blog/posts/seo-andreslopez" />
+  </url>
+  <url>
+    <loc>https://www.andreslopez.com.mx/blog/posts/laravel-12</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.andreslopez.com.mx/blog/posts/laravel-12" />
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://www.andreslopez.com.mx/es/blog/posts/laravel-12" />
+  </url>
+  <url>
+    <loc>https://www.andreslopez.com.mx/es/blog/posts/laravel-12</loc>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://www.andreslopez.com.mx/es/blog/posts/laravel-12" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.andreslopez.com.mx/blog/posts/laravel-12" />
+  </url>
+  <url>
+    <loc>https://www.andreslopez.com.mx/blog/posts/laravel-cloud</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.andreslopez.com.mx/blog/posts/laravel-cloud" />
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://www.andreslopez.com.mx/es/blog/posts/laravel-cloud" />
+  </url>
+  <url>
+    <loc>https://www.andreslopez.com.mx/es/blog/posts/laravel-cloud</loc>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://www.andreslopez.com.mx/es/blog/posts/laravel-cloud" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.andreslopez.com.mx/blog/posts/laravel-cloud" />
+  </url>
+  <url>
+    <loc>https://www.andreslopez.com.mx/blog/posts/eloquent-collections-and-arrays</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.andreslopez.com.mx/blog/posts/eloquent-collections-and-arrays" />
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://www.andreslopez.com.mx/es/blog/posts/eloquent-collections-and-arrays" />
+  </url>
+  <url>
+    <loc>https://www.andreslopez.com.mx/es/blog/posts/eloquent-collections-and-arrays</loc>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://www.andreslopez.com.mx/es/blog/posts/eloquent-collections-and-arrays" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.andreslopez.com.mx/blog/posts/eloquent-collections-and-arrays" />
+  </url>
+</urlset>
