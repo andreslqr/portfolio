@@ -33,7 +33,7 @@ export default defineI18nConfig(() => ({
       pagenotfound: 'Page not found',
       ctaerror: 'Go back to a safe place',
       publishedby: 'Published by',
-      medescription: 'Laravel lover, Vue enthusiastic & writer of everything sounds interesting',
+      medescription: 'Laravel lover, Vue enthusiast & writer of everything sounds interesting',
       blogback: 'Back to list...',
       footerrights: 'All rights reserved',
       footerpowered: 'Powered by',
