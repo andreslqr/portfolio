@@ -32,6 +32,6 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: `/images/index-${locale.value}.png`
+  ogImage: `/images/index-${locale.value}.webp`
 })
 </script>
