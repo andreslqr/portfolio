@@ -5,7 +5,7 @@
                 {{ $t('home') }}
             </Button>
         </li>
-        <li class="w-full md:w-auto">
+        <li class="w-full md:w-auto" v-if="isBlogActive">
             <Button as="router-link" label="Router" :to="localePath({name: 'blog-page', params: {page: '1'}})" text size="large" class="capitalize w-full md:w-auto" :aria-label="$t('blog')">
                 {{ $t('blog') }}
             </Button>
@@ -20,4 +20,6 @@
 </template>
 <script setup lang="ts">
 const localePath = useLocalePath()
+const isBlogActive = useIsSpanish()
+
 </script>

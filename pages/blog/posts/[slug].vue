@@ -1,14 +1,14 @@
 <template>
-  <div class="max-w-4xl mx-auto px-2 lg:px-0">
+  <div class="max-w-4xl mx-auto px-2 lg:px-0" v-if="post">
     <div class="leading-loose">
       <h1 class="text-center text-4xl md:text-5xl font-extrabold font-serif mt-4 mb-8">
-        {{ post?.title }}
+        {{ post.title }}
       </h1>
     </div>
     <p class="text-xs my-4 text-surface-600 dark:text-surface-200">
       {{ $t('publishedby') }} Andrés López
     </p>
-    <NuxtPicture :src="post?.image" :img-attrs="{alt: post?.title, class: 'rounded mx-auto my-4 w-full shadow-lg dark:shadow-surface-700'}" />
+    <NuxtPicture :src="post.image" :img-attrs="{alt: post.title, class: 'rounded mx-auto my-4 w-full shadow-lg dark:shadow-surface-700'}" />
     <section id="blog-content">
       <ContentRenderer v-if="post" :value="post" />
     </section>
@@ -34,12 +34,14 @@
 </template>
 <script setup lang="ts">
 const route = useRoute()
+const router = useRouter()
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
+const isBlogActive = useIsSpanish()
 
 const slug = typeof route.params.slug == 'string' ? `/${route.params.slug}` : ''
 
-const { data: post } = await useAsyncData(slug,  () => queryCollection(`${locale.value}Posts`).path(slug).first(), {
+const { data: post } = await useAsyncData(slug,  () => queryCollection(`esPosts`).path(slug).first(), {
                                                 watch: [locale]
                                     })
 
@@ -49,6 +51,10 @@ if(post.value == null) {
     statusCode: 404,
     statusMessage: t('pagenotfound')
   })
+}
+
+if(! isBlogActive.value) {
+  router.push({ path: '/' })
 }
 
 useSeoMeta({

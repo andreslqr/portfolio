@@ -57,6 +57,7 @@ export default defineNuxtConfig({
     format: ['webp']
   },
   i18n: {
+    baseUrl: 'https://andreslopez.com.mx',
     vueI18n: './i18n.config.ts',
     locales: [
       { code: 'en', language: 'en-US', },

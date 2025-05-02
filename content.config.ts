@@ -41,12 +41,5 @@ export default defineContentConfig({
         prefix: '/'
       }
     }),
-    enPosts: defineCollection({
-      ...postCollection,
-      source: {
-        include: 'posts/en/*.md',
-        prefix: '/'
-      }
-    })
   }
 })
