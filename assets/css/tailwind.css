@@ -34,6 +34,9 @@
     @tailwind utilities;
 }
 
+#blog-contnet h1, h2, h3, h4, h5, h6 {
+    @apply scroll-mt-24;
+}
 
 #blog-content h1 {
     @apply text-4xl font-bold mt-8 mb-4;

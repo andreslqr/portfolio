@@ -32,8 +32,12 @@ export default defineNuxtConfig({
           'data-key': 'IsYkb8Q0EGCEgn3+MZJ4jA',
           async: true
         }
-      ]
-    }
+      ],
+      htmlAttrs: {
+        class: 'scroll-smooth'
+      },
+    },
+
   },
   primevue: {
     options: {

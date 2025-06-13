@@ -14,7 +14,7 @@
         </GradientButton>
       </div>
     </div>
-    <div class="w-full md:w-1/2 flex justify-center">
+    <div class="w-full md:w-1/2 flex justify-center min-h-36 md:min-h-0">
       <ClientOnly>
         <IconCloud :images="logos" />
       </ClientOnly>
@@ -55,7 +55,7 @@ const slugs = [
   "bootstrap"
 ]
 
-const logos = slugs.map((slug) => `https://cdn.simpleicons.org/${slug}/${slug}`);
+const logos = slugs.map((slug) => `https://cdn.simpleicons.org/${slug}/${isDark.value ? "ffffff" : "000000"}`);
 
 const mailto = computed(() => {
   const mailto = 'mailto'
