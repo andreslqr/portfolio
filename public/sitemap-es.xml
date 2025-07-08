@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://wsitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://wandreslopez.com.mx/es</loc>
+    <loc>https://andreslopez.com.mx/es</loc>
   </url>
   <url>
-    <loc>https://wandreslopez.com.mx/es/blog/1</loc>
+    <loc>https://andreslopez.com.mx/es/blog/1</loc>
   </url>
   <url>
-    <loc>https://wandreslopez.com.mx/es/blog/posts/seo-andreslopez</loc>
+    <loc>https://andreslopez.com.mx/es/blog/posts/seo-andreslopez</loc>
   </url>
   <url>
-    <loc>https://wandreslopez.com.mx/es/blog/posts/laravel-12</loc>
+    <loc>https://andreslopez.com.mx/es/blog/posts/laravel-12</loc>
   </url>
   <url>
-    <loc>https://wandreslopez.com.mx/es/blog/posts/laravel-cloud</loc>
+    <loc>https://andreslopez.com.mx/es/blog/posts/laravel-cloud</loc>
   </url>
   <url>
-    <loc>https://wandreslopez.com.mx/es/blog/posts/eloquent-collections-and-arrays</loc>
+    <loc>https://andreslopez.com.mx/es/blog/posts/eloquent-collections-and-arrays</loc>
   </url>
   <url>
-    <loc>https://wandreslopez.com.mx/es/blog/posts/bye-jetstream-fortify</loc>
+    <loc>https://andreslopez.com.mx/es/blog/posts/bye-jetstream-fortify</loc>
   </url>
   <url>
-    <loc>https://wandreslopez.com.mx/es/blog/posts/livewire-starter-kit</loc>
+    <loc>https://andreslopez.com.mx/es/blog/posts/livewire-starter-kit</loc>
   </url>
   <url>
-    <loc>https://wandreslopez.com.mx/es/blog/posts/config-app</loc>
+    <loc>https://andreslopez.com.mx/es/blog/posts/config-app</loc>
   </url>
   <url>
-    <loc>https://wandreslopez.com.mx/es/blog/posts/filamentphp-4</loc>
+    <loc>https://andreslopez.com.mx/es/blog/posts/filamentphp-4</loc>
   </url>
   <url>
     <loc>https://andreslopez.com.mx/es/blog/posts/filamentphp-4-beta</loc>
   </url>
   <url>
     <loc>https://andreslopez.com.mx/es/blog/posts/eloquent-unhydrated</loc>
+  </url>
+  <url>
+    <loc>https://andreslopez.com.mx/es/blog/posts/tipado-fuerte-laravel</loc>
   </url>
 </urlset>
