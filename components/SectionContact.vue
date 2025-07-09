@@ -9,7 +9,7 @@
           <label for="message">Tu mensaje:</label>
       </FloatLabel>
       <div class="w-full flex justify-end mt-2">
-        <GradientButton :bg-color="bgColor" :href="mailto">
+        <GradientButton :bg-color="bgColor" :href="mailto" class="AhrefsAnalytics-event-contact">
           {{ $t('contactcta') }} 🚀
         </GradientButton>
       </div>
