@@ -4,11 +4,11 @@
       <div class="relative w-full h-full group">
         <div class="absolute inset-0 size-full scale-[0.80] rounded-full">
         </div>
-        <div class="relative flex h-full flex-col items-start justify-start overflow-hidden rounded-lg p-2 shadow group-hover:shadow-lg group-hover:dark:shadow-surface-700 shadow-surface-200 dark:shadow-surface-700">
-          <NuxtPicture :src="props.image" class="w-full" :img-attrs="{class: 'rounded group-hover:rounded-b-none group-hover:saturate-150 group-hover:scale-105 transition duration-500 w-full', alt: props.title, width: 350, height: 200}" />
-          <h3 v-text="props.title" class="text-xl font-serif my-2 group-hover:translate-y-1 group-hover:text-primary transition duration-500">
+        <div class="relative flex h-full flex-col items-start justify-start overflow-hidden rounded-lg p-4 shadow group-hover:shadow-md group-hover:dark:shadow-surface-700 shadow-surface-200 dark:shadow-surface-700">
+          <NuxtPicture :src="props.image" class="w-full" :img-attrs="{class: 'rounded group-hover:rounded-b-none group-hover:saturate-150 group-hover:scale-110 transition duration-500 w-full', alt: props.title, width: 350, height: 200}" />
+          <h3 v-text="props.title" class="text-xl font-serif my-2 group-hover:translate-y-2 group-hover:text-primary transition duration-500">
           </h3>
-          <p v-text="props.description" class="my-1 text-surface-700 dark:text-surface-300 mt-auto">
+          <p v-text="props.description" class="my-1 text-surface-700 dark:text-surface-300 mt-auto group-hover:translate-y-2 transition duration-500">
           </p>
           <ClientOnly v-if="props.meteors" >
             <Meteors />
