@@ -25,6 +25,12 @@
 import type { Job } from '~/types';
 const jobs: Ref<Job[]> = ref([
   {
+    name: 'Amdocs',
+    logo: '/images/amdocs.png',
+    description: 'experienceamdocs',
+    year: 2025
+  },
+  {
     name: 'Internet Brands',
     logo: '/images/internet-brands.png',
     description: 'experienceinternetbrands',

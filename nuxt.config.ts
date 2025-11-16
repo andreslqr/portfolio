@@ -118,7 +118,9 @@ export default defineNuxtConfig({
         '/_ipx/s_500x280/images/content/projects/ekar-de-gas.png',
         '/_ipx/s_500x280/images/content/projects/honda-de-mexico.png',
         '/_ipx/s_500x280/images/content/projects/redplug.png',
-        '/_ipx/s_500x280/images/content/projects/visor-logistico.png'
+        '/_ipx/s_500x280/images/content/projects/visor-logistico.png',
+        '/es/blog/1',
+        '/es/blog/2'
       ]
     }
   },

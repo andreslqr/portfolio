@@ -8,16 +8,19 @@
         <BlogCard v-for="post in posts" :key="`blog-${post.id}`" :path="post.path" :title="post.title" :image="post.image" :description="post.description" />
       </BlogGrid>
     </section>
+    <section class="flex justify-evenly py-4">
+      <Button class="px-8" as="router-link" label="Router" :to="localePath({name: 'blog-page', params: {page: page - 1}})" v-if="page != 1">
+        ←
+      </Button>
+      <Button class="px-8" as="router-link" label="Router" :to="localePath({name: 'blog-page', params: {page: page + 1}})" v-if="skip + postsLimit < (totalPosts ?? 0)">
+        →
+      </Button>
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
-/**
- * Definitly WIP untill have +12 posts
- * if you are checking my code portfolio now you know that
- * i leave a product limit on my blog :P
- * i'm not being silly, i just don't have enough scope data
- */
+const localePath = useLocalePath()
 const route = useRoute()
 const router = useRouter()
 const { t, locale } = useI18n()
@@ -45,11 +48,15 @@ useSeoMeta({
 })
 
 
-const page = typeof route.params.page == 'number' ? route.params.page : 1
-const postsLimit = ref(12)
-const skip = ref(page == 1 ? 0 : page * postsLimit.value)
+const page = Number(route.params.page)
 
-const { data: posts } = useAsyncData(`blog-posts:lang-${locale.value}:page-${page}-limit-${postsLimit.value}`,  () => queryCollection(`esPosts`)
+const postsLimit = ref(12)
+const skip = ref((page - 1) * postsLimit.value)
+
+const { data: totalPosts } = useAsyncData(`blog-posts:count`, () => queryCollection(`esPosts`).count())
+
+
+const { data: posts } = await useAsyncData(`blog-posts:lang-${locale.value}:page-${page}-limit-${postsLimit.value}`,  () => queryCollection(`esPosts`)
                                               .select('id', 'title', 'path', 'image', 'description')
                                               .limit(postsLimit.value)
                                               .skip(skip.value)
