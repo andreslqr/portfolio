@@ -18,7 +18,7 @@
 <script setup lang="ts">
 const { locale } = useI18n()
 
-const itemsPerMarquee = ref(4)
+const itemsPerMarquee = ref(3)
 
 const { data } = useAsyncData(`projects:${locale.value}`, () => queryCollection(`${locale.value}Projects`)
                                                                                     .select('id', 'image', 'title', 'description', 'link')

@@ -42,7 +42,10 @@ const slugs = [
   "alpine.js",
   "nuxt",
   "tailwindcss",
-  "bootstrap"
+  "bootstrap",
+  "cursor",
+  "docker",
+  "kubernetes"
 ]
 
 const technologies = [

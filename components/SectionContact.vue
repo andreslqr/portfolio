@@ -52,7 +52,10 @@ const slugs = [
   "alpine.js",
   "nuxt",
   "tailwindcss",
-  "bootstrap"
+  "bootstrap",
+  "cursor",
+  "docker",
+  "kubernetes"
 ]
 
 const logos = slugs.map((slug) => `https://cdn.simpleicons.org/${slug}/${isDark.value ? "ffffff" : "000000"}`);
