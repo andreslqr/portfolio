@@ -3,7 +3,11 @@ import Theme from "./themes/default"
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-25',
-  devtools: { enabled: true },
+  devtools: { enabled: process.env.NODE_ENV !== 'production' },
+  sourcemap: {
+    server: false,
+    client: false,
+  },
   vite: {
     optimizeDeps: {
       include: [
