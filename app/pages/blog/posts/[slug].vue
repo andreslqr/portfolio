@@ -41,12 +41,11 @@ const isBlogActive = useIsSpanish()
 
 const slug = typeof route.params.slug == 'string' ? `/${route.params.slug}` : ''
 
-const { data: post } = await useAsyncData(slug,  () => queryCollection(`esPosts`).path(slug).first(), {
-                                                watch: [locale]
-                                    })
+const { data: post } = await useAsyncData(`blog-post:${slug}`, () => queryCollection(`esPosts`).path(slug).first(), {
+  watch: [locale],
+})
 
-
-if(post.value == null) {
+if (!post.value) {
   showError({
     statusCode: 404,
     statusMessage: t('pagenotfound')

@@ -232,7 +232,7 @@ onMounted(() => {
       ctx.globalAlpha = opacity;
 
       if (imageCanvasesRef.value[index] && imagesLoadedRef.value[index]) {
-        ctx.drawImage(imageCanvasesRef.value[index], -20, -20, 40, 40);
+        ctx.drawImage(imageCanvasesRef.value[index] as CanvasImageSource, -20, -20, 40, 40);
       }
       ctx.restore();
     });

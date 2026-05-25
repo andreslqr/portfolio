@@ -1,7 +1,7 @@
-import { defineContentConfig, defineCollection, z, type Collection } from '@nuxt/content'
+import { defineContentConfig, defineCollection, z } from '@nuxt/content'
 
-const projectCollection: Collection = {
-  type: 'page',
+const projectCollection = {
+  type: 'page' as const,
   source: '**/*.md',
   schema: z.object({
     image: z.string(),
@@ -11,8 +11,8 @@ const projectCollection: Collection = {
   })
 }
 
-const postCollection: Collection = {
-  type: 'page',
+const postCollection = {
+  type: 'page' as const,
   source: '**/*.md',
   schema: z.object({
     title: z.string(),

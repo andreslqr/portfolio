@@ -7,7 +7,7 @@
     <div class="flex flex-col items-center w-full md:w-1/2 z-10">
       <div>
 
-        <Button raised rounded class="my-4 px-8 font-semibold bg-primary-800 border-prmary-600 dark:bg-primary-300 dark:border-primary-200">
+        <Button raised rounded class="my-4 px-8 font-semibold bg-primary-800 border-primary-600 dark:bg-primary-300 dark:border-primary-200">
           {{ $t("iam") }}
         </Button>
         <h1 class="text-5xl md:text-6xl font-serif font-semibold my-2">

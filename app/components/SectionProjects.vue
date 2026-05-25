@@ -16,6 +16,8 @@
   </div>
 </template>
 <script setup lang="ts">
+import { useChunk } from '~/composables/useChunk'
+
 const { locale } = useI18n()
 
 const itemsPerMarquee = ref(3)

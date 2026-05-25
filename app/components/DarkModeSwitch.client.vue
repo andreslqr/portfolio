@@ -14,15 +14,16 @@ const themes = ref([
     { 'key': 'dark', 'label': 'Dark', 'icon': 'heroicons:moon' },
 ])
 const colorMode = useColorMode()
-const index = ref<number>(0)
 
-index.value = themes.value.findIndex(theme => theme.key === colorMode.preference)
-const selectedTheme = ref(themes.value[index.value])
-    
+const initialIndex = Math.max(0, themes.value.findIndex(theme => theme.key === colorMode.preference))
+const index = ref(initialIndex)
+const selectedTheme = ref(themes.value[initialIndex]!)
+
 const changeTheme = () => {
     index.value = index.value < 2 ? index.value + 1 : 0
-    colorMode.preference = themes.value[index.value].key
-    selectedTheme.value = themes.value[index.value]
+    const nextTheme = themes.value[index.value]!
+    colorMode.preference = nextTheme.key
+    selectedTheme.value = nextTheme
 }
 
 </script>

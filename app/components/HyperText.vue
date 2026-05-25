@@ -48,8 +48,8 @@ const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const displayText = ref(props.text.split(""));
 const iterations = ref(0);
 
-function getRandomLetter() {
-  return alphabets[Math.floor(Math.random() * alphabets.length)];
+function getRandomLetter(): string {
+  return alphabets[Math.floor(Math.random() * alphabets.length)] ?? 'A'
 }
 function triggerAnimation() {
   iterations.value = 0;
@@ -59,8 +59,8 @@ function triggerAnimation() {
 const { pause, resume } = useIntervalFn(
   () => {
     if (iterations.value < props.text.length) {
-      displayText.value = displayText.value.map((l, i) =>
-        l === " " ? l : i <= iterations.value ? props.text[i] : getRandomLetter(),
+      displayText.value = displayText.value.map((l, i): string =>
+        l === " " ? l : i <= iterations.value ? (props.text.charAt(i) || l) : getRandomLetter(),
       );
       iterations.value += 0.1;
     } else {

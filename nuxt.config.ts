@@ -2,8 +2,19 @@
 import Theme from "./themes/default"
 
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
+  compatibilityDate: '2025-05-25',
   devtools: { enabled: true },
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+        'clsx',
+        'motion-v',
+        'tailwind-merge',
+      ],
+    },
+  },
   typescript: {
     typeCheck: true,
     strict: true
@@ -21,8 +32,8 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@primevue/nuxt-module',
     '@vueuse/nuxt',
-    'nuxt-lodash',
   ],
+  css: ['~/assets/css/tailwind.css'],
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
@@ -40,6 +51,12 @@ export default defineNuxtConfig({
 
   },
   primevue: {
+    components: {
+      include: ['Button', 'Chip', 'Drawer', 'FloatLabel', 'Image', 'Tag', 'Textarea', 'Timeline'],
+    },
+    directives: {
+      include: ['Tooltip'],
+    },
     options: {
       theme: {
         preset: Theme,
@@ -47,9 +64,9 @@ export default defineNuxtConfig({
           darkModeSelector: '.dark',
           cssLayer: {
             name: 'primevue',
-            order: 'tailwind-base, primevue, tailwind-utilities'
-          }
-        }
+            order: 'theme, base, primevue',
+          },
+        },
       },
       ripple: true,
     },
@@ -58,11 +75,14 @@ export default defineNuxtConfig({
     classSuffix: ''
   },
   image: {
-    format: ['webp']
+    format: ['webp'],
+    screens: {
+      xxl: 2560,
+      '3xl': 3072,
+    }
   },
   i18n: {
     baseUrl: 'https://andreslopez.com.mx',
-    vueI18n: './i18n.config.ts',
     locales: [
       { code: 'en', language: 'en-US', },
       { code: 'es', language: 'es-MX', }

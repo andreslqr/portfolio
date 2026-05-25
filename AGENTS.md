@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is **Andres Lopez's personal portfolio website** built with **Nuxt 3** (SSG/SSR). It showcases his professional experience, projects, and technical blog. The site is bilingual (English/Spanish), supports dark mode, and features a modern UI with animations and particle effects.
+This is **Andres Lopez's personal portfolio website** built with **Nuxt 4** (SSG/SSR). It showcases his professional experience, projects, and technical blog. The site is bilingual (English/Spanish), supports dark mode, and features a modern UI with animations and particle effects.
 
 **Live URL:** `https://andreslopez.com.mx`
 
@@ -10,22 +10,22 @@ This is **Andres Lopez's personal portfolio website** built with **Nuxt 3** (SSG
 
 | Layer | Technology |
 |-------|------------|
-| Framework | Nuxt 3 (Vue 3, Composition API) |
+| Framework | Nuxt 4.4.6 (Vue 3, Composition API) |
 | Language | TypeScript (strict mode) |
-| Styling | Tailwind CSS + PrimeVue (custom theme) |
-| Content | @nuxt/content (Markdown-driven blog & projects) |
-| i18n | @nuxtjs/i18n (en-US, es-MX) |
-| UI Components | PrimeVue, Inspira UI, custom Vue components |
-| Image Optimization | @nuxt/image (WebP) |
-| Utilities | VueUse, Nuxt Lodash, Motion-V (animations) |
+| Styling | Tailwind CSS v4 + PrimeVue (custom theme) |
+| Content | @nuxt/content 3.14 (Markdown-driven blog & projects) |
+| i18n | @nuxtjs/i18n v10 (en-US, es-MX) |
+| UI Components | PrimeVue 4 (@primeuix/themes), custom Vue components |
+| Image Optimization | @nuxt/image v2 (WebP) |
+| Utilities | VueUse, Motion-V (animations) |
 | Fonts | @nuxt/fonts (Montserrat, Oswald, Rubik Glitch) |
 | Analytics | Ahrefs Analytics |
 
 ### Architecture
 
 ```
-app/
-├── assets/css/        # Tailwind CSS + custom styles
+app/                   # Nuxt 4 srcDir (default)
+├── assets/css/        # Tailwind CSS v4 + custom styles
 ├── components/        # Vue components (section components, UI widgets)
 ├── composables/       # Vue composables/reusable logic
 ├── layouts/           # Page layouts (default.vue)
@@ -34,9 +34,11 @@ app/
 │   └── blog/
 │       ├── [page].vue       # Blog pagination
 │       └── posts/[slug].vue # Individual blog post
-├── themes/            # PrimeVue theme configuration
 └── types/             # TypeScript type definitions
 
+i18n/                  # Vue I18n config (i18n.config.ts)
+themes/                # PrimeVue theme preset
+content/               # @nuxt/content collections (root)
 content/
 ├── posts/es/          # Spanish blog posts (Markdown)
 ├── projects/en/       # English project descriptions (Markdown)
@@ -103,7 +105,7 @@ The site uses **prerendering** for optimized image variants (`@nuxt/image`) and 
 - **Tailwind CSS** with custom `red-plug` color palette (reds) and `purple-heart` palette
 - **PrimeVue** components with custom theme (`themes/default`)
 - **Dark mode** via `.dark` class selector (not media query)
-- **CSS Layers** order: `tailwind-base` → `primevue` → `tailwind-utilities`
+- **CSS Layers** order: `theme, base, primevue, utilities` (Tailwind v4 + PrimeVue)
 
 ### Fonts
 - **Sans-serif:** Montserrat (body text)
@@ -114,7 +116,7 @@ The site uses **prerendering** for optimized image variants (`@nuxt/image`) and 
 - **Default locale:** English (`en`)
 - **Locales:** `en-US`, `es-MX`
 - **Base URL:** `https://andreslopez.com.mx`
-- Translations defined in `i18n.config.ts`
+- Translations defined in `i18n/i18n.config.ts`
 - Language switcher: `LangSwitch.client.vue`
 
 ### Page Transitions
@@ -143,7 +145,7 @@ Defined in `app.vue`: fade with grayscale effect (`200ms`).
 
 - The project uses **file-based routing** (Nuxt convention)
 - Blog posts are primarily in **Spanish** (`posts/es/`); English posts collection is configured but not present
-- The `pages/blog/posts/[slug].vue` handles dynamic blog post rendering
+- The `app/pages/blog/posts/[slug].vue` handles dynamic blog post rendering
 - The error page (`error.vue`) includes particle background animation and i18n support
 - Prerendering in `nuxt.config.ts` pre-generates multiple image size variants for responsive loading
 - The `extends` array in Nuxt config has a commented-out GitHub layer reference (legacy/unused)
