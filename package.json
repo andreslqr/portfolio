@@ -2,6 +2,10 @@
   "name": "red-plug-app",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@11.1.2",
+  "engines": {
+    "pnpm": ">=11"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
