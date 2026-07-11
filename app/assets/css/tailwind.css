@@ -107,11 +107,11 @@
 }
 
 #blog-content pre {
-    @apply bg-surface-100 dark:bg-surface-900 rounded-md py-4 pr-10 my-4 overflow-auto;
+    @apply bg-surface-100 dark:bg-surface-900 rounded-md py-4 px-4 pr-10 my-4 overflow-auto;
 }
 
 #blog-content pre > code {
-    @apply text-sm font-mono;
+    @apply text-sm font-mono block;
 }
 
 #blog-content p > code,

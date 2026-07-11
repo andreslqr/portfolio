@@ -16,7 +16,7 @@ async function copyCode() {
 </script>
 
 <template>
-  <div class="relative group my-4">
+  <div class="relative group">
     <button
       v-if="isSupported && code"
       type="button"
