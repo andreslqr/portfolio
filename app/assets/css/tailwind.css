@@ -107,7 +107,7 @@
 }
 
 #blog-content pre {
-    @apply bg-surface-100 dark:bg-surface-900 rounded-md py-4 my-4 overflow-auto;
+    @apply bg-surface-100 dark:bg-surface-900 rounded-md py-4 pr-10 my-4 overflow-auto;
 }
 
 #blog-content pre > code {

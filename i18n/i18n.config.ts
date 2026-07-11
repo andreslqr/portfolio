@@ -40,7 +40,9 @@ export default defineI18nConfig(() => ({
       footerpowered: 'Powered by',
       openmenu: 'Open menu',
       toggledarkmode: 'Toggle dark mode',
-      changelang: 'Change language'
+      changelang: 'Change language',
+      copy: 'Copy code',
+      copied: 'Copied'
     },
     es: {
       indextitle: 'AL',
@@ -80,7 +82,9 @@ export default defineI18nConfig(() => ({
       footerpowered: 'Impulsado por',
       openmenu: 'Abrir menú',
       toggledarkmode: 'Alternar modo oscuro',
-      changelang: 'Cambiar idioma'
+      changelang: 'Cambiar idioma',
+      copy: 'Copiar código',
+      copied: 'Copiado'
     }
   }
 }))
