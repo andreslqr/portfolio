@@ -1,0 +1,37 @@
+# Dory (https://github.com/Augani/dory): usa el contexto `dory` y habilita networking
+# una vez con el script de Dory para dominios *.dory.local y HTTPS local.
+# Este servicio queda en https://portfolio.dory.local (y en http://localhost:3000).
+name: portfolio
+
+services:
+  app:
+    container_name: portfolio
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      NUXT_HOST: 0.0.0.0
+      NUXT_PORT: "3000"
+      NUXT_HMR_HOST: portfolio.dory.local
+      APP_URL: https://portfolio.dory.local
+      CHOKIDAR_USEPOLLING: "true"
+      WATCHPACK_POLLING: "true"
+    volumes:
+      - .:/app
+      - app_node_modules:/app/node_modules
+      - app_nuxt:/app/.nuxt
+      - app_output:/app/.output
+      - app_data:/app/.data
+    stdin_open: true
+    tty: true
+
+volumes:
+  app_node_modules:
+  app_nuxt:
+  app_output:
+  app_data:

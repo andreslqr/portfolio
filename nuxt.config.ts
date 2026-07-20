@@ -18,6 +18,18 @@ export default defineNuxtConfig({
         'tailwind-merge',
       ],
     },
+    ...(process.env.NUXT_HMR_HOST
+      ? {
+          server: {
+            allowedHosts: [process.env.NUXT_HMR_HOST],
+            hmr: {
+              protocol: 'wss',
+              host: process.env.NUXT_HMR_HOST,
+              clientPort: 443,
+            },
+          },
+        }
+      : {}),
   },
   typescript: {
     typeCheck: true,

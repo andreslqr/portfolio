@@ -1,0 +1,28 @@
+# Dependencies and build outputs
+node_modules
+.pnpm-store
+.output
+.nuxt
+.nitro
+.cache
+.data
+dist
+
+# Git and IDE
+.git
+.github
+.cursor
+.fleet
+.idea
+.DS_Store
+
+# Logs and env
+*.log
+.env
+.env.*
+!.env.example
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
