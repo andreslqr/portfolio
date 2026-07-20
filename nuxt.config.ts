@@ -18,18 +18,30 @@ export default defineNuxtConfig({
         'tailwind-merge',
       ],
     },
-    ...(process.env.NUXT_HMR_HOST
-      ? {
-          server: {
-            allowedHosts: [process.env.NUXT_HMR_HOST],
+    server: {
+      // Allow Dory / custom hosts without forcing wss:443 (that breaks http://localhost:3000
+      // when local HTTPS is not listening, and Brave will keep the tab "loading").
+      allowedHosts: [
+        'localhost',
+        '.dory.local',
+        ...(process.env.NUXT_HMR_HOST ? [process.env.NUXT_HMR_HOST] : []),
+      ],
+      ...(process.env.NUXT_HMR_PROTOCOL || process.env.NUXT_HMR_CLIENT_PORT
+        ? {
             hmr: {
-              protocol: 'wss',
-              host: process.env.NUXT_HMR_HOST,
-              clientPort: 443,
+              ...(process.env.NUXT_HMR_HOST
+                ? { host: process.env.NUXT_HMR_HOST }
+                : {}),
+              ...(process.env.NUXT_HMR_PROTOCOL
+                ? { protocol: process.env.NUXT_HMR_PROTOCOL as 'ws' | 'wss' }
+                : {}),
+              ...(process.env.NUXT_HMR_CLIENT_PORT
+                ? { clientPort: Number(process.env.NUXT_HMR_CLIENT_PORT) }
+                : {}),
             },
-          },
-        }
-      : {}),
+          }
+        : {}),
+    },
   },
   typescript: {
     typeCheck: true,
@@ -68,7 +80,7 @@ export default defineNuxtConfig({
   },
   primevue: {
     components: {
-      include: ['Button', 'Chip', 'Drawer', 'FloatLabel', 'Image', 'Tag', 'Textarea', 'Timeline'],
+      include: ['Button', 'Chip', 'Drawer', 'FloatLabel', 'Image', 'Tag', 'Textarea', 'Timeline', 'Toast'],
     },
     directives: {
       include: ['Tooltip'],

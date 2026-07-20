@@ -17,8 +17,12 @@ services:
     environment:
       NUXT_HOST: 0.0.0.0
       NUXT_PORT: "3000"
-      NUXT_HMR_HOST: portfolio.dory.local
-      APP_URL: https://portfolio.dory.local
+      # Let HMR follow the page URL (ws://localhost:3000). Only set these when
+      # Dory HTTPS is actually listening on :443:
+      # NUXT_HMR_HOST: portfolio.dory.local
+      # NUXT_HMR_PROTOCOL: wss
+      # NUXT_HMR_CLIENT_PORT: "443"
+      APP_URL: http://localhost:3000
       CHOKIDAR_USEPOLLING: "true"
       WATCHPACK_POLLING: "true"
     volumes:
