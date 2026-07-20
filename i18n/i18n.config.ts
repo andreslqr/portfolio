@@ -42,7 +42,9 @@ export default defineI18nConfig(() => ({
       toggledarkmode: 'Toggle dark mode',
       changelang: 'Change language',
       copy: 'Copy code',
-      copied: 'Copied'
+      copied: 'Copied',
+      copieddetail: 'Code copied to clipboard',
+      copyfailed: 'Could not copy code',
     },
     es: {
       indextitle: 'AL',
@@ -84,7 +86,9 @@ export default defineI18nConfig(() => ({
       toggledarkmode: 'Alternar modo oscuro',
       changelang: 'Cambiar idioma',
       copy: 'Copiar código',
-      copied: 'Copiado'
+      copied: 'Copiado',
+      copieddetail: 'Código copiado al portapapeles',
+      copyfailed: 'No se pudo copiar el código',
     }
   }
 }))

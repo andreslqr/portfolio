@@ -1,12 +1,12 @@
 <template>
     <NuxtLoadingIndicator :color="false" class="!bg-gradient-to-r !from-primary-500 !to-primary-200 !dark:from-primary-500 !dark:to-primary-950" />
     <main>
-  
         <AppHeader />
         <slot />
         <ScrollTop />
         <AppFooter />
     </main>
+    <Toast position="top-right" :pt="{ root: { class: '!top-[5.5rem]' } }" />
     <Icon name="heroicons:computer-desktop" class="!hidden" />
     <Icon name="heroicons:sun" class="!hidden" />
     <Icon name="heroicons:moon" class="!hidden" />

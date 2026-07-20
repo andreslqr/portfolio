@@ -11,6 +11,7 @@ const usedComponents = [
   'tag',
   'textarea',
   'timeline',
+  'toast',
   'tooltip',
 ] as const
 
