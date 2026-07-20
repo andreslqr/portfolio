@@ -1,4 +1,6 @@
 <script setup lang="ts">
+defineOptions({ inheritAttrs: false })
+
 const props = defineProps<{
   code?: string
   language?: string | null
@@ -42,15 +44,18 @@ async function copyCode() {
     <button
       v-if="code"
       type="button"
-      class="absolute top-2 right-2 z-10 p-1.5 rounded-md bg-surface-200 dark:bg-surface-800 hover:bg-surface-300 dark:hover:bg-surface-700 transition-colors"
+      class="absolute top-2 right-2 z-10 size-8 inline-flex items-center justify-center rounded-md leading-none bg-surface-200 dark:bg-surface-800 hover:bg-surface-300 dark:hover:bg-surface-700 transition-colors"
       :aria-label="copied ? t('copied') : t('copy')"
       @click="copyCode"
     >
       <Icon
         :name="copied ? 'heroicons:clipboard-document-check' : 'heroicons:clipboard-document'"
-        class="text-lg text-surface-600 dark:text-surface-300"
+        class="size-4.5 shrink-0 text-surface-600 dark:text-surface-300"
       />
     </button>
-    <pre :class="language ? `language-${language}` : undefined"><code><slot /></code></pre>
+    <pre
+      v-bind="$attrs"
+      :class="language ? `language-${language}` : undefined"
+    ><code><slot /></code></pre>
   </div>
 </template>
